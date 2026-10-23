@@ -1,0 +1,37 @@
+{
+  "router_version": "1.0.0",
+  "source": {
+    "filename": "dropped_negative_sign.pdf",
+    "sha256": "108d8992a16473faecb9e739ac775a8db516dd2dce5ed4a89fd0675f5483394e"
+  },
+  "scope": "Heuristic routing for the declared assets-only baseline; no OCR/VLM executed",
+  "summary": {
+    "pages": 1,
+    "decisions": {
+      "human_review": 1
+    },
+    "action_required": true
+  },
+  "pages": [
+    {
+      "page_index": 1,
+      "decision": "human_review",
+      "reasons": [
+        "Arithmetic residual exceeds the assumed tolerance or a depreciation sign is unexpected",
+        "Compare an alternate extractor/source page before deciding whether the issue is extraction or source data"
+      ],
+      "row_count": 43,
+      "validation_summary": {
+        "checks": 20,
+        "exact": 7,
+        "within_tolerance": 10,
+        "beyond_tolerance": 1,
+        "not_evaluated": 2,
+        "complete": false,
+        "requires_review": true
+      },
+      "structural_issues": [],
+      "extraction_error_code": null
+    }
+  ]
+}

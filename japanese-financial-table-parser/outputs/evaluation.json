@@ -1,0 +1,77 @@
+{
+  "scope": "Single supplied page; development-set comparison, not held-out generalization",
+  "reference_provenance": {
+    "method": "AI-assisted manual transcription and visual review of rendered source",
+    "independent_of_parser_output": true,
+    "independent_human_review": false,
+    "limitations": "Same assistant authored parser and reference; independent human review is pending."
+  },
+  "expected_rows": 43,
+  "actual_rows": 43,
+  "row_order_matches": true,
+  "periods_match": true,
+  "metrics": {
+    "label_raw": {
+      "correct": 43,
+      "total": 43,
+      "accuracy": 1.0
+    },
+    "label": {
+      "correct": 43,
+      "total": 43,
+      "accuracy": 1.0
+    },
+    "path": {
+      "correct": 43,
+      "total": 43,
+      "accuracy": 1.0
+    },
+    "parent_id": {
+      "correct": 43,
+      "total": 43,
+      "accuracy": 1.0
+    },
+    "depth": {
+      "correct": 43,
+      "total": 43,
+      "accuracy": 1.0
+    },
+    "kind": {
+      "correct": 43,
+      "total": 43,
+      "accuracy": 1.0
+    },
+    "cell_semantics": {
+      "correct": 86,
+      "total": 86,
+      "accuracy": 1.0
+    },
+    "raw_cell_text": {
+      "correct": 86,
+      "total": 86,
+      "accuracy": 1.0
+    },
+    "negative_marker": {
+      "correct": 10,
+      "total": 10,
+      "accuracy": 1.0
+    },
+    "number": {
+      "correct": 72,
+      "total": 72,
+      "accuracy": 1.0
+    },
+    "dash": {
+      "correct": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "blank": {
+      "correct": 12,
+      "total": 12,
+      "accuracy": 1.0
+    }
+  },
+  "errors": [],
+  "passed": true
+}

@@ -1,0 +1,28 @@
+{
+  "router_version": "1.0.0",
+  "source": {
+    "filename": "unknown_section.pdf",
+    "sha256": "13daeb1080ee2aa3463552f58260ab27b6c362362e0b700eb2a2c16243464790"
+  },
+  "scope": "Heuristic routing for the declared assets-only baseline; no OCR/VLM executed",
+  "summary": {
+    "pages": 1,
+    "decisions": {
+      "structure_review": 1
+    },
+    "action_required": true
+  },
+  "pages": [
+    {
+      "page_index": 1,
+      "decision": "structure_review",
+      "reasons": [
+        "Readable but unsupported section labels: 未分類資産"
+      ],
+      "row_count": 43,
+      "validation_summary": null,
+      "structural_issues": [],
+      "extraction_error_code": null
+    }
+  ]
+}

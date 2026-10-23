@@ -1,0 +1,2411 @@
+{
+  "schema_version": "1.0.0",
+  "source": {
+    "filename": "balance_sheet_after_correction.pdf",
+    "sha256": "0764bba6f5f0e7984a837e4cc19d8bb95db4a7ac22c26f18c95bbe652c983c74",
+    "page_count": 1
+  },
+  "extractor": {
+    "name": "pdfplumber",
+    "version": "0.11.9",
+    "method": "detected_cell_boundaries_and_label_indentation"
+  },
+  "pages": [
+    {
+      "page_index": 1,
+      "width": 595.2,
+      "height": 841.8,
+      "table_bbox": [
+        54.72,
+        146.2197,
+        524.6414,
+        675.312
+      ],
+      "metadata": {
+        "title_raw": "（１）連結貸借対照表",
+        "currency": "JPY",
+        "unit_raw": "千円",
+        "unit_multiplier": 1000,
+        "correction_marker_raw": "（訂正後）",
+        "printed_page_number": 4,
+        "columns": [
+          {
+            "id": "c1",
+            "label_raw": "前連結会計年度",
+            "date_raw": "(2025年３月31日)",
+            "period": "2025-03-31",
+            "source_bbox": [
+              274.7045,
+              146.2197,
+              399.7445,
+              675.312
+            ]
+          },
+          {
+            "id": "c2",
+            "label_raw": "当連結会計年度",
+            "date_raw": "(2026年３月31日)",
+            "period": "2026-03-31",
+            "source_bbox": [
+              399.7445,
+              146.2197,
+              524.6414,
+              675.312
+            ]
+          }
+        ]
+      },
+      "rows": [
+        {
+          "id": "r001",
+          "label_raw": "資産の部",
+          "label": "資産の部",
+          "depth": 0,
+          "parent_id": null,
+          "path": [
+            "資産の部"
+          ],
+          "kind": "section",
+          "label_x0": 62.28,
+          "source_bbox": [
+            54.72,
+            146.2197,
+            524.6414,
+            158.4
+          ],
+          "label_source_bbox": [
+            54.72,
+            146.2197,
+            274.7045,
+            158.4
+          ],
+          "cells": {
+            "c1": {
+              "raw": "",
+              "normalized": "",
+              "value": null,
+              "status": "blank",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                146.2197,
+                399.7445,
+                158.4
+              ]
+            },
+            "c2": {
+              "raw": "",
+              "normalized": "",
+              "value": null,
+              "status": "blank",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                146.2197,
+                524.6414,
+                158.4
+              ]
+            }
+          }
+        },
+        {
+          "id": "r002",
+          "label_raw": "流動資産",
+          "label": "流動資産",
+          "depth": 1,
+          "parent_id": "r001",
+          "path": [
+            "資産の部",
+            "流動資産"
+          ],
+          "kind": "section",
+          "label_x0": 75.24,
+          "source_bbox": [
+            54.72,
+            158.4,
+            524.6414,
+            170.4
+          ],
+          "label_source_bbox": [
+            54.72,
+            158.4,
+            274.7045,
+            170.4
+          ],
+          "cells": {
+            "c1": {
+              "raw": "",
+              "normalized": "",
+              "value": null,
+              "status": "blank",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                158.4,
+                399.7445,
+                170.4
+              ]
+            },
+            "c2": {
+              "raw": "",
+              "normalized": "",
+              "value": null,
+              "status": "blank",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                158.4,
+                524.6414,
+                170.4
+              ]
+            }
+          }
+        },
+        {
+          "id": "r003",
+          "label_raw": "現金及び預金",
+          "label": "現金及び預金",
+          "depth": 2,
+          "parent_id": "r002",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "現金及び預金"
+          ],
+          "kind": "item",
+          "label_x0": 88.2,
+          "source_bbox": [
+            54.72,
+            170.4,
+            524.6414,
+            182.3997
+          ],
+          "label_source_bbox": [
+            54.72,
+            170.4,
+            274.7045,
+            182.3997
+          ],
+          "cells": {
+            "c1": {
+              "raw": "2,002,429",
+              "normalized": "2,002,429",
+              "value": 2002429,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                170.4,
+                399.7445,
+                182.3997
+              ]
+            },
+            "c2": {
+              "raw": "608,281",
+              "normalized": "608,281",
+              "value": 608281,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                170.4,
+                524.6414,
+                182.3997
+              ]
+            }
+          }
+        },
+        {
+          "id": "r004",
+          "label_raw": "受取手形",
+          "label": "受取手形",
+          "depth": 2,
+          "parent_id": "r002",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "受取手形"
+          ],
+          "kind": "item",
+          "label_x0": 88.2,
+          "source_bbox": [
+            54.72,
+            182.3997,
+            524.6414,
+            194.4
+          ],
+          "label_source_bbox": [
+            54.72,
+            182.3997,
+            274.7045,
+            194.4
+          ],
+          "cells": {
+            "c1": {
+              "raw": "20,659",
+              "normalized": "20,659",
+              "value": 20659,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                182.3997,
+                399.7445,
+                194.4
+              ]
+            },
+            "c2": {
+              "raw": "26,333",
+              "normalized": "26,333",
+              "value": 26333,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                182.3997,
+                524.6414,
+                194.4
+              ]
+            }
+          }
+        },
+        {
+          "id": "r005",
+          "label_raw": "売掛金",
+          "label": "売掛金",
+          "depth": 2,
+          "parent_id": "r002",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "売掛金"
+          ],
+          "kind": "item",
+          "label_x0": 88.2,
+          "source_bbox": [
+            54.72,
+            194.4,
+            524.6414,
+            206.4
+          ],
+          "label_source_bbox": [
+            54.72,
+            194.4,
+            274.7045,
+            206.4
+          ],
+          "cells": {
+            "c1": {
+              "raw": "2,019,476",
+              "normalized": "2,019,476",
+              "value": 2019476,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                194.4,
+                399.7445,
+                206.4
+              ]
+            },
+            "c2": {
+              "raw": "884,339",
+              "normalized": "884,339",
+              "value": 884339,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                194.4,
+                524.6414,
+                206.4
+              ]
+            }
+          }
+        },
+        {
+          "id": "r006",
+          "label_raw": "電子記録債権",
+          "label": "電子記録債権",
+          "depth": 2,
+          "parent_id": "r002",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "電子記録債権"
+          ],
+          "kind": "item",
+          "label_x0": 88.2,
+          "source_bbox": [
+            54.72,
+            206.4,
+            524.6414,
+            218.3997
+          ],
+          "label_source_bbox": [
+            54.72,
+            206.4,
+            274.7045,
+            218.3997
+          ],
+          "cells": {
+            "c1": {
+              "raw": "564,667",
+              "normalized": "564,667",
+              "value": 564667,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                206.4,
+                399.7445,
+                218.3997
+              ]
+            },
+            "c2": {
+              "raw": "370,468",
+              "normalized": "370,468",
+              "value": 370468,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                206.4,
+                524.6414,
+                218.3997
+              ]
+            }
+          }
+        },
+        {
+          "id": "r007",
+          "label_raw": "商品及び製品",
+          "label": "商品及び製品",
+          "depth": 2,
+          "parent_id": "r002",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "商品及び製品"
+          ],
+          "kind": "item",
+          "label_x0": 88.2,
+          "source_bbox": [
+            54.72,
+            218.3997,
+            524.6414,
+            230.4
+          ],
+          "label_source_bbox": [
+            54.72,
+            218.3997,
+            274.7045,
+            230.4
+          ],
+          "cells": {
+            "c1": {
+              "raw": "589,488",
+              "normalized": "589,488",
+              "value": 589488,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                218.3997,
+                399.7445,
+                230.4
+              ]
+            },
+            "c2": {
+              "raw": "1,019,663",
+              "normalized": "1,019,663",
+              "value": 1019663,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                218.3997,
+                524.6414,
+                230.4
+              ]
+            }
+          }
+        },
+        {
+          "id": "r008",
+          "label_raw": "仕掛品",
+          "label": "仕掛品",
+          "depth": 2,
+          "parent_id": "r002",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "仕掛品"
+          ],
+          "kind": "item",
+          "label_x0": 88.2,
+          "source_bbox": [
+            54.72,
+            230.4,
+            524.6414,
+            242.4
+          ],
+          "label_source_bbox": [
+            54.72,
+            230.4,
+            274.7045,
+            242.4
+          ],
+          "cells": {
+            "c1": {
+              "raw": "186,748",
+              "normalized": "186,748",
+              "value": 186748,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                230.4,
+                399.7445,
+                242.4
+              ]
+            },
+            "c2": {
+              "raw": "55,344",
+              "normalized": "55,344",
+              "value": 55344,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                230.4,
+                524.6414,
+                242.4
+              ]
+            }
+          }
+        },
+        {
+          "id": "r009",
+          "label_raw": "原材料及び貯蔵品",
+          "label": "原材料及び貯蔵品",
+          "depth": 2,
+          "parent_id": "r002",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "原材料及び貯蔵品"
+          ],
+          "kind": "item",
+          "label_x0": 88.2,
+          "source_bbox": [
+            54.72,
+            242.4,
+            524.6414,
+            254.3997
+          ],
+          "label_source_bbox": [
+            54.72,
+            242.4,
+            274.7045,
+            254.3997
+          ],
+          "cells": {
+            "c1": {
+              "raw": "370,403",
+              "normalized": "370,403",
+              "value": 370403,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                242.4,
+                399.7445,
+                254.3997
+              ]
+            },
+            "c2": {
+              "raw": "136,082",
+              "normalized": "136,082",
+              "value": 136082,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                242.4,
+                524.6414,
+                254.3997
+              ]
+            }
+          }
+        },
+        {
+          "id": "r010",
+          "label_raw": "短期貸付金",
+          "label": "短期貸付金",
+          "depth": 2,
+          "parent_id": "r002",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "短期貸付金"
+          ],
+          "kind": "item",
+          "label_x0": 88.2,
+          "source_bbox": [
+            54.72,
+            254.3997,
+            524.6414,
+            266.4
+          ],
+          "label_source_bbox": [
+            54.72,
+            254.3997,
+            274.7045,
+            266.4
+          ],
+          "cells": {
+            "c1": {
+              "raw": "7,530",
+              "normalized": "7,530",
+              "value": 7530,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                254.3997,
+                399.7445,
+                266.4
+              ]
+            },
+            "c2": {
+              "raw": "30,000",
+              "normalized": "30,000",
+              "value": 30000,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                254.3997,
+                524.6414,
+                266.4
+              ]
+            }
+          }
+        },
+        {
+          "id": "r011",
+          "label_raw": "その他",
+          "label": "その他",
+          "depth": 2,
+          "parent_id": "r002",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "その他"
+          ],
+          "kind": "item",
+          "label_x0": 88.2,
+          "source_bbox": [
+            54.72,
+            266.4,
+            524.6414,
+            278.4
+          ],
+          "label_source_bbox": [
+            54.72,
+            266.4,
+            274.7045,
+            278.4
+          ],
+          "cells": {
+            "c1": {
+              "raw": "105,260",
+              "normalized": "105,260",
+              "value": 105260,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                266.4,
+                399.7445,
+                278.4
+              ]
+            },
+            "c2": {
+              "raw": "246,895",
+              "normalized": "246,895",
+              "value": 246895,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                266.4,
+                524.6414,
+                278.4
+              ]
+            }
+          }
+        },
+        {
+          "id": "r012",
+          "label_raw": "貸倒引当金",
+          "label": "貸倒引当金",
+          "depth": 2,
+          "parent_id": "r002",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "貸倒引当金"
+          ],
+          "kind": "item",
+          "label_x0": 88.2,
+          "source_bbox": [
+            54.72,
+            278.4,
+            524.6414,
+            290.7598
+          ],
+          "label_source_bbox": [
+            54.72,
+            278.4,
+            274.7045,
+            290.7598
+          ],
+          "cells": {
+            "c1": {
+              "raw": "△2,979",
+              "normalized": "△2,979",
+              "value": -2979,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                278.4,
+                399.7445,
+                290.7598
+              ]
+            },
+            "c2": {
+              "raw": "△0",
+              "normalized": "△0",
+              "value": 0,
+              "status": "number",
+              "negative_zero": true,
+              "source_bbox": [
+                399.7445,
+                278.4,
+                524.6414,
+                290.7598
+              ]
+            }
+          }
+        },
+        {
+          "id": "r013",
+          "label_raw": "流動資産合計",
+          "label": "流動資産合計",
+          "depth": 2,
+          "parent_id": "r002",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "流動資産合計"
+          ],
+          "kind": "subtotal",
+          "label_x0": 88.2,
+          "source_bbox": [
+            54.72,
+            290.7598,
+            524.6414,
+            303.52
+          ],
+          "label_source_bbox": [
+            54.72,
+            290.7598,
+            274.7045,
+            303.52
+          ],
+          "cells": {
+            "c1": {
+              "raw": "5,863,684",
+              "normalized": "5,863,684",
+              "value": 5863684,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                290.7598,
+                399.7445,
+                303.52
+              ]
+            },
+            "c2": {
+              "raw": "3,377,407",
+              "normalized": "3,377,407",
+              "value": 3377407,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                290.7598,
+                524.6414,
+                303.52
+              ]
+            }
+          }
+        },
+        {
+          "id": "r014",
+          "label_raw": "固定資産",
+          "label": "固定資産",
+          "depth": 1,
+          "parent_id": "r001",
+          "path": [
+            "資産の部",
+            "固定資産"
+          ],
+          "kind": "section",
+          "label_x0": 75.24,
+          "source_bbox": [
+            54.72,
+            303.52,
+            524.6414,
+            315.9597
+          ],
+          "label_source_bbox": [
+            54.72,
+            303.52,
+            274.7045,
+            315.9597
+          ],
+          "cells": {
+            "c1": {
+              "raw": "",
+              "normalized": "",
+              "value": null,
+              "status": "blank",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                303.52,
+                399.7445,
+                315.9597
+              ]
+            },
+            "c2": {
+              "raw": "",
+              "normalized": "",
+              "value": null,
+              "status": "blank",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                303.52,
+                524.6414,
+                315.9597
+              ]
+            }
+          }
+        },
+        {
+          "id": "r015",
+          "label_raw": "有形固定資産",
+          "label": "有形固定資産",
+          "depth": 2,
+          "parent_id": "r014",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産"
+          ],
+          "kind": "section",
+          "label_x0": 88.2,
+          "source_bbox": [
+            54.72,
+            315.9597,
+            524.6414,
+            327.96
+          ],
+          "label_source_bbox": [
+            54.72,
+            315.9597,
+            274.7045,
+            327.96
+          ],
+          "cells": {
+            "c1": {
+              "raw": "",
+              "normalized": "",
+              "value": null,
+              "status": "blank",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                315.9597,
+                399.7445,
+                327.96
+              ]
+            },
+            "c2": {
+              "raw": "",
+              "normalized": "",
+              "value": null,
+              "status": "blank",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                315.9597,
+                524.6414,
+                327.96
+              ]
+            }
+          }
+        },
+        {
+          "id": "r016",
+          "label_raw": "建物及び構築物",
+          "label": "建物及び構築物",
+          "depth": 3,
+          "parent_id": "r015",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "建物及び構築物"
+          ],
+          "kind": "item",
+          "label_x0": 101.28,
+          "source_bbox": [
+            54.72,
+            327.96,
+            524.6414,
+            339.96
+          ],
+          "label_source_bbox": [
+            54.72,
+            327.96,
+            274.7045,
+            339.96
+          ],
+          "cells": {
+            "c1": {
+              "raw": "2,121,360",
+              "normalized": "2,121,360",
+              "value": 2121360,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                327.96,
+                399.7445,
+                339.96
+              ]
+            },
+            "c2": {
+              "raw": "1,880,082",
+              "normalized": "1,880,082",
+              "value": 1880082,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                327.96,
+                524.6414,
+                339.96
+              ]
+            }
+          }
+        },
+        {
+          "id": "r017",
+          "label_raw": "減価償却累計額",
+          "label": "減価償却累計額",
+          "depth": 4,
+          "parent_id": "r016",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "建物及び構築物",
+            "減価償却累計額"
+          ],
+          "kind": "item",
+          "label_x0": 114.24,
+          "source_bbox": [
+            54.72,
+            339.96,
+            524.6414,
+            352.3198
+          ],
+          "label_source_bbox": [
+            54.72,
+            339.96,
+            274.7045,
+            352.3198
+          ],
+          "cells": {
+            "c1": {
+              "raw": "△1,923,585",
+              "normalized": "△1,923,585",
+              "value": -1923585,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                339.96,
+                399.7445,
+                352.3198
+              ]
+            },
+            "c2": {
+              "raw": "△1,640,253",
+              "normalized": "△1,640,253",
+              "value": -1640253,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                339.96,
+                524.6414,
+                352.3198
+              ]
+            }
+          }
+        },
+        {
+          "id": "r018",
+          "label_raw": "建物及び構築物（純額）",
+          "label": "建物及び構築物(純額)",
+          "depth": 4,
+          "parent_id": "r016",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "建物及び構築物",
+            "建物及び構築物(純額)"
+          ],
+          "kind": "net",
+          "label_x0": 114.24,
+          "source_bbox": [
+            54.72,
+            352.3198,
+            524.6414,
+            365.04
+          ],
+          "label_source_bbox": [
+            54.72,
+            352.3198,
+            274.7045,
+            365.04
+          ],
+          "cells": {
+            "c1": {
+              "raw": "197,775",
+              "normalized": "197,775",
+              "value": 197775,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                352.3198,
+                399.7445,
+                365.04
+              ]
+            },
+            "c2": {
+              "raw": "239,828",
+              "normalized": "239,828",
+              "value": 239828,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                352.3198,
+                524.6414,
+                365.04
+              ]
+            }
+          }
+        },
+        {
+          "id": "r019",
+          "label_raw": "機械装置及び運搬具",
+          "label": "機械装置及び運搬具",
+          "depth": 3,
+          "parent_id": "r015",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "機械装置及び運搬具"
+          ],
+          "kind": "item",
+          "label_x0": 101.28,
+          "source_bbox": [
+            54.72,
+            365.04,
+            524.6414,
+            377.4
+          ],
+          "label_source_bbox": [
+            54.72,
+            365.04,
+            274.7045,
+            377.4
+          ],
+          "cells": {
+            "c1": {
+              "raw": "4,024,922",
+              "normalized": "4,024,922",
+              "value": 4024922,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                365.04,
+                399.7445,
+                377.4
+              ]
+            },
+            "c2": {
+              "raw": "2,250,799",
+              "normalized": "2,250,799",
+              "value": 2250799,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                365.04,
+                524.6414,
+                377.4
+              ]
+            }
+          }
+        },
+        {
+          "id": "r020",
+          "label_raw": "減価償却累計額",
+          "label": "減価償却累計額",
+          "depth": 4,
+          "parent_id": "r019",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "機械装置及び運搬具",
+            "減価償却累計額"
+          ],
+          "kind": "item",
+          "label_x0": 114.24,
+          "source_bbox": [
+            54.72,
+            377.4,
+            524.6414,
+            389.7598
+          ],
+          "label_source_bbox": [
+            54.72,
+            377.4,
+            274.7045,
+            389.7598
+          ],
+          "cells": {
+            "c1": {
+              "raw": "△3,634,165",
+              "normalized": "△3,634,165",
+              "value": -3634165,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                377.4,
+                399.7445,
+                389.7598
+              ]
+            },
+            "c2": {
+              "raw": "△1,914,091",
+              "normalized": "△1,914,091",
+              "value": -1914091,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                377.4,
+                524.6414,
+                389.7598
+              ]
+            }
+          }
+        },
+        {
+          "id": "r021",
+          "label_raw": "機械装置及び運搬具（純額）",
+          "label": "機械装置及び運搬具(純額)",
+          "depth": 4,
+          "parent_id": "r019",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "機械装置及び運搬具",
+            "機械装置及び運搬具(純額)"
+          ],
+          "kind": "net",
+          "label_x0": 114.24,
+          "source_bbox": [
+            54.72,
+            389.7598,
+            524.6414,
+            402.52
+          ],
+          "label_source_bbox": [
+            54.72,
+            389.7598,
+            274.7045,
+            402.52
+          ],
+          "cells": {
+            "c1": {
+              "raw": "390,757",
+              "normalized": "390,757",
+              "value": 390757,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                389.7598,
+                399.7445,
+                402.52
+              ]
+            },
+            "c2": {
+              "raw": "336,708",
+              "normalized": "336,708",
+              "value": 336708,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                389.7598,
+                524.6414,
+                402.52
+              ]
+            }
+          }
+        },
+        {
+          "id": "r022",
+          "label_raw": "土地",
+          "label": "土地",
+          "depth": 3,
+          "parent_id": "r015",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "土地"
+          ],
+          "kind": "item",
+          "label_x0": 101.28,
+          "source_bbox": [
+            54.72,
+            402.52,
+            524.6414,
+            414.9597
+          ],
+          "label_source_bbox": [
+            54.72,
+            402.52,
+            274.7045,
+            414.9597
+          ],
+          "cells": {
+            "c1": {
+              "raw": "768,976",
+              "normalized": "768,976",
+              "value": 768976,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                402.52,
+                399.7445,
+                414.9597
+              ]
+            },
+            "c2": {
+              "raw": "705,403",
+              "normalized": "705,403",
+              "value": 705403,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                402.52,
+                524.6414,
+                414.9597
+              ]
+            }
+          }
+        },
+        {
+          "id": "r023",
+          "label_raw": "リース資産",
+          "label": "リース資産",
+          "depth": 3,
+          "parent_id": "r015",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "リース資産"
+          ],
+          "kind": "item",
+          "label_x0": 101.28,
+          "source_bbox": [
+            54.72,
+            414.9597,
+            524.6414,
+            426.96
+          ],
+          "label_source_bbox": [
+            54.72,
+            414.9597,
+            274.7045,
+            426.96
+          ],
+          "cells": {
+            "c1": {
+              "raw": "210,746",
+              "normalized": "210,746",
+              "value": 210746,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                414.9597,
+                399.7445,
+                426.96
+              ]
+            },
+            "c2": {
+              "raw": "213,939",
+              "normalized": "213,939",
+              "value": 213939,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                414.9597,
+                524.6414,
+                426.96
+              ]
+            }
+          }
+        },
+        {
+          "id": "r024",
+          "label_raw": "減価償却累計額",
+          "label": "減価償却累計額",
+          "depth": 4,
+          "parent_id": "r023",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "リース資産",
+            "減価償却累計額"
+          ],
+          "kind": "item",
+          "label_x0": 114.24,
+          "source_bbox": [
+            54.72,
+            426.96,
+            524.6414,
+            439.32
+          ],
+          "label_source_bbox": [
+            54.72,
+            426.96,
+            274.7045,
+            439.32
+          ],
+          "cells": {
+            "c1": {
+              "raw": "△147,599",
+              "normalized": "△147,599",
+              "value": -147599,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                426.96,
+                399.7445,
+                439.32
+              ]
+            },
+            "c2": {
+              "raw": "△172,066",
+              "normalized": "△172,066",
+              "value": -172066,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                426.96,
+                524.6414,
+                439.32
+              ]
+            }
+          }
+        },
+        {
+          "id": "r025",
+          "label_raw": "リース資産（純額）",
+          "label": "リース資産(純額)",
+          "depth": 4,
+          "parent_id": "r023",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "リース資産",
+            "リース資産(純額)"
+          ],
+          "kind": "net",
+          "label_x0": 114.24,
+          "source_bbox": [
+            54.72,
+            439.32,
+            524.6414,
+            452.0398
+          ],
+          "label_source_bbox": [
+            54.72,
+            439.32,
+            274.7045,
+            452.0398
+          ],
+          "cells": {
+            "c1": {
+              "raw": "63,146",
+              "normalized": "63,146",
+              "value": 63146,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                439.32,
+                399.7445,
+                452.0398
+              ]
+            },
+            "c2": {
+              "raw": "41,872",
+              "normalized": "41,872",
+              "value": 41872,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                439.32,
+                524.6414,
+                452.0398
+              ]
+            }
+          }
+        },
+        {
+          "id": "r026",
+          "label_raw": "建設仮勘定",
+          "label": "建設仮勘定",
+          "depth": 3,
+          "parent_id": "r015",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "建設仮勘定"
+          ],
+          "kind": "item",
+          "label_x0": 101.28,
+          "source_bbox": [
+            54.72,
+            452.0398,
+            524.6414,
+            464.76
+          ],
+          "label_source_bbox": [
+            54.72,
+            452.0398,
+            274.7045,
+            464.76
+          ],
+          "cells": {
+            "c1": {
+              "raw": "－",
+              "normalized": "-",
+              "value": null,
+              "status": "dash",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                452.0398,
+                399.7445,
+                464.76
+              ]
+            },
+            "c2": {
+              "raw": "4,553",
+              "normalized": "4,553",
+              "value": 4553,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                452.0398,
+                524.6414,
+                464.76
+              ]
+            }
+          }
+        },
+        {
+          "id": "r027",
+          "label_raw": "その他",
+          "label": "その他",
+          "depth": 3,
+          "parent_id": "r015",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "その他"
+          ],
+          "kind": "item",
+          "label_x0": 101.28,
+          "source_bbox": [
+            54.72,
+            464.76,
+            524.6414,
+            477.12
+          ],
+          "label_source_bbox": [
+            54.72,
+            464.76,
+            274.7045,
+            477.12
+          ],
+          "cells": {
+            "c1": {
+              "raw": "848,814",
+              "normalized": "848,814",
+              "value": 848814,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                464.76,
+                399.7445,
+                477.12
+              ]
+            },
+            "c2": {
+              "raw": "446,126",
+              "normalized": "446,126",
+              "value": 446126,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                464.76,
+                524.6414,
+                477.12
+              ]
+            }
+          }
+        },
+        {
+          "id": "r028",
+          "label_raw": "減価償却累計額",
+          "label": "減価償却累計額",
+          "depth": 4,
+          "parent_id": "r027",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "その他",
+            "減価償却累計額"
+          ],
+          "kind": "item",
+          "label_x0": 114.24,
+          "source_bbox": [
+            54.72,
+            477.12,
+            524.6414,
+            489.52
+          ],
+          "label_source_bbox": [
+            54.72,
+            477.12,
+            274.7045,
+            489.52
+          ],
+          "cells": {
+            "c1": {
+              "raw": "△840,375",
+              "normalized": "△840,375",
+              "value": -840375,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                477.12,
+                399.7445,
+                489.52
+              ]
+            },
+            "c2": {
+              "raw": "△421,883",
+              "normalized": "△421,883",
+              "value": -421883,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                477.12,
+                524.6414,
+                489.52
+              ]
+            }
+          }
+        },
+        {
+          "id": "r029",
+          "label_raw": "その他（純額）",
+          "label": "その他(純額)",
+          "depth": 4,
+          "parent_id": "r027",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "その他",
+            "その他(純額)"
+          ],
+          "kind": "net",
+          "label_x0": 114.24,
+          "source_bbox": [
+            54.72,
+            489.52,
+            524.6414,
+            502.32
+          ],
+          "label_source_bbox": [
+            54.72,
+            489.52,
+            274.7045,
+            502.32
+          ],
+          "cells": {
+            "c1": {
+              "raw": "8,439",
+              "normalized": "8,439",
+              "value": 8439,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                489.52,
+                399.7445,
+                502.32
+              ]
+            },
+            "c2": {
+              "raw": "24,243",
+              "normalized": "24,243",
+              "value": 24243,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                489.52,
+                524.6414,
+                502.32
+              ]
+            }
+          }
+        },
+        {
+          "id": "r030",
+          "label_raw": "有形固定資産合計",
+          "label": "有形固定資産合計",
+          "depth": 3,
+          "parent_id": "r015",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "有形固定資産合計"
+          ],
+          "kind": "subtotal",
+          "label_x0": 101.28,
+          "source_bbox": [
+            54.72,
+            502.32,
+            524.6414,
+            515.0398
+          ],
+          "label_source_bbox": [
+            54.72,
+            502.32,
+            274.7045,
+            515.0398
+          ],
+          "cells": {
+            "c1": {
+              "raw": "1,429,094",
+              "normalized": "1,429,094",
+              "value": 1429094,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                502.32,
+                399.7445,
+                515.0398
+              ]
+            },
+            "c2": {
+              "raw": "1,352,610",
+              "normalized": "1,352,610",
+              "value": 1352610,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                502.32,
+                524.6414,
+                515.0398
+              ]
+            }
+          }
+        },
+        {
+          "id": "r031",
+          "label_raw": "無形固定資産",
+          "label": "無形固定資産",
+          "depth": 2,
+          "parent_id": "r014",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "無形固定資産"
+          ],
+          "kind": "section",
+          "label_x0": 88.2,
+          "source_bbox": [
+            54.72,
+            515.0398,
+            524.6414,
+            527.4
+          ],
+          "label_source_bbox": [
+            54.72,
+            515.0398,
+            274.7045,
+            527.4
+          ],
+          "cells": {
+            "c1": {
+              "raw": "",
+              "normalized": "",
+              "value": null,
+              "status": "blank",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                515.0398,
+                399.7445,
+                527.4
+              ]
+            },
+            "c2": {
+              "raw": "",
+              "normalized": "",
+              "value": null,
+              "status": "blank",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                515.0398,
+                524.6414,
+                527.4
+              ]
+            }
+          }
+        },
+        {
+          "id": "r032",
+          "label_raw": "リース資産",
+          "label": "リース資産",
+          "depth": 3,
+          "parent_id": "r031",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "無形固定資産",
+            "リース資産"
+          ],
+          "kind": "item",
+          "label_x0": 101.28,
+          "source_bbox": [
+            54.72,
+            527.4,
+            524.6414,
+            539.4
+          ],
+          "label_source_bbox": [
+            54.72,
+            527.4,
+            274.7045,
+            539.4
+          ],
+          "cells": {
+            "c1": {
+              "raw": "34,190",
+              "normalized": "34,190",
+              "value": 34190,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                527.4,
+                399.7445,
+                539.4
+              ]
+            },
+            "c2": {
+              "raw": "21,402",
+              "normalized": "21,402",
+              "value": 21402,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                527.4,
+                524.6414,
+                539.4
+              ]
+            }
+          }
+        },
+        {
+          "id": "r033",
+          "label_raw": "その他",
+          "label": "その他",
+          "depth": 3,
+          "parent_id": "r031",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "無形固定資産",
+            "その他"
+          ],
+          "kind": "item",
+          "label_x0": 101.28,
+          "source_bbox": [
+            54.72,
+            539.4,
+            524.6414,
+            551.7598
+          ],
+          "label_source_bbox": [
+            54.72,
+            539.4,
+            274.7045,
+            551.7598
+          ],
+          "cells": {
+            "c1": {
+              "raw": "10,070",
+              "normalized": "10,070",
+              "value": 10070,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                539.4,
+                399.7445,
+                551.7598
+              ]
+            },
+            "c2": {
+              "raw": "14,466",
+              "normalized": "14,466",
+              "value": 14466,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                539.4,
+                524.6414,
+                551.7598
+              ]
+            }
+          }
+        },
+        {
+          "id": "r034",
+          "label_raw": "無形固定資産合計",
+          "label": "無形固定資産合計",
+          "depth": 3,
+          "parent_id": "r031",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "無形固定資産",
+            "無形固定資産合計"
+          ],
+          "kind": "subtotal",
+          "label_x0": 101.28,
+          "source_bbox": [
+            54.72,
+            551.7598,
+            524.6414,
+            564.52
+          ],
+          "label_source_bbox": [
+            54.72,
+            551.7598,
+            274.7045,
+            564.52
+          ],
+          "cells": {
+            "c1": {
+              "raw": "44,261",
+              "normalized": "44,261",
+              "value": 44261,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                551.7598,
+                399.7445,
+                564.52
+              ]
+            },
+            "c2": {
+              "raw": "35,869",
+              "normalized": "35,869",
+              "value": 35869,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                551.7598,
+                524.6414,
+                564.52
+              ]
+            }
+          }
+        },
+        {
+          "id": "r035",
+          "label_raw": "投資その他の資産",
+          "label": "投資その他の資産",
+          "depth": 2,
+          "parent_id": "r014",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "投資その他の資産"
+          ],
+          "kind": "section",
+          "label_x0": 88.2,
+          "source_bbox": [
+            54.72,
+            564.52,
+            524.6414,
+            576.9597
+          ],
+          "label_source_bbox": [
+            54.72,
+            564.52,
+            274.7045,
+            576.9597
+          ],
+          "cells": {
+            "c1": {
+              "raw": "",
+              "normalized": "",
+              "value": null,
+              "status": "blank",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                564.52,
+                399.7445,
+                576.9597
+              ]
+            },
+            "c2": {
+              "raw": "",
+              "normalized": "",
+              "value": null,
+              "status": "blank",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                564.52,
+                524.6414,
+                576.9597
+              ]
+            }
+          }
+        },
+        {
+          "id": "r036",
+          "label_raw": "投資有価証券",
+          "label": "投資有価証券",
+          "depth": 3,
+          "parent_id": "r035",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "投資その他の資産",
+            "投資有価証券"
+          ],
+          "kind": "item",
+          "label_x0": 101.28,
+          "source_bbox": [
+            54.72,
+            576.9597,
+            524.6414,
+            588.8571
+          ],
+          "label_source_bbox": [
+            54.72,
+            576.9597,
+            274.7045,
+            588.8571
+          ],
+          "cells": {
+            "c1": {
+              "raw": "44,180",
+              "normalized": "44,180",
+              "value": 44180,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                576.9597,
+                399.7445,
+                588.8571
+              ]
+            },
+            "c2": {
+              "raw": "218,836",
+              "normalized": "218,836",
+              "value": 218836,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                576.9597,
+                524.6414,
+                588.8571
+              ]
+            }
+          }
+        },
+        {
+          "id": "r037",
+          "label_raw": "関係会社株式",
+          "label": "関係会社株式",
+          "depth": 3,
+          "parent_id": "r035",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "投資その他の資産",
+            "関係会社株式"
+          ],
+          "kind": "item",
+          "label_x0": 101.28,
+          "source_bbox": [
+            54.72,
+            588.8571,
+            524.6414,
+            600.8571
+          ],
+          "label_source_bbox": [
+            54.72,
+            588.8571,
+            274.7045,
+            600.8571
+          ],
+          "cells": {
+            "c1": {
+              "raw": "1,123",
+              "normalized": "1,123",
+              "value": 1123,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                588.8571,
+                399.7445,
+                600.8571
+              ]
+            },
+            "c2": {
+              "raw": "1,123",
+              "normalized": "1,123",
+              "value": 1123,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                588.8571,
+                524.6414,
+                600.8571
+              ]
+            }
+          }
+        },
+        {
+          "id": "r038",
+          "label_raw": "長期貸付金",
+          "label": "長期貸付金",
+          "depth": 3,
+          "parent_id": "r035",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "投資その他の資産",
+            "長期貸付金"
+          ],
+          "kind": "item",
+          "label_x0": 101.28,
+          "source_bbox": [
+            54.72,
+            600.8571,
+            524.6414,
+            612.9597
+          ],
+          "label_source_bbox": [
+            54.72,
+            600.8571,
+            274.7045,
+            612.9597
+          ],
+          "cells": {
+            "c1": {
+              "raw": "－",
+              "normalized": "-",
+              "value": null,
+              "status": "dash",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                600.8571,
+                399.7445,
+                612.9597
+              ]
+            },
+            "c2": {
+              "raw": "62,000",
+              "normalized": "62,000",
+              "value": 62000,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                600.8571,
+                524.6414,
+                612.9597
+              ]
+            }
+          }
+        },
+        {
+          "id": "r039",
+          "label_raw": "退職給付に係る資産",
+          "label": "退職給付に係る資産",
+          "depth": 3,
+          "parent_id": "r035",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "投資その他の資産",
+            "退職給付に係る資産"
+          ],
+          "kind": "item",
+          "label_x0": 101.28,
+          "source_bbox": [
+            54.72,
+            612.9597,
+            524.6414,
+            624.96
+          ],
+          "label_source_bbox": [
+            54.72,
+            612.9597,
+            274.7045,
+            624.96
+          ],
+          "cells": {
+            "c1": {
+              "raw": "18,404",
+              "normalized": "18,404",
+              "value": 18404,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                612.9597,
+                399.7445,
+                624.96
+              ]
+            },
+            "c2": {
+              "raw": "16,435",
+              "normalized": "16,435",
+              "value": 16435,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                612.9597,
+                524.6414,
+                624.96
+              ]
+            }
+          }
+        },
+        {
+          "id": "r040",
+          "label_raw": "その他",
+          "label": "その他",
+          "depth": 3,
+          "parent_id": "r035",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "投資その他の資産",
+            "その他"
+          ],
+          "kind": "item",
+          "label_x0": 101.28,
+          "source_bbox": [
+            54.72,
+            624.96,
+            524.6414,
+            637.32
+          ],
+          "label_source_bbox": [
+            54.72,
+            624.96,
+            274.7045,
+            637.32
+          ],
+          "cells": {
+            "c1": {
+              "raw": "133,361",
+              "normalized": "133,361",
+              "value": 133361,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                624.96,
+                399.7445,
+                637.32
+              ]
+            },
+            "c2": {
+              "raw": "70,967",
+              "normalized": "70,967",
+              "value": 70967,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                624.96,
+                524.6414,
+                637.32
+              ]
+            }
+          }
+        },
+        {
+          "id": "r041",
+          "label_raw": "投資その他の資産合計",
+          "label": "投資その他の資産合計",
+          "depth": 3,
+          "parent_id": "r035",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "投資その他の資産",
+            "投資その他の資産合計"
+          ],
+          "kind": "subtotal",
+          "label_x0": 101.28,
+          "source_bbox": [
+            54.72,
+            637.32,
+            524.6414,
+            650.0398
+          ],
+          "label_source_bbox": [
+            54.72,
+            637.32,
+            274.7045,
+            650.0398
+          ],
+          "cells": {
+            "c1": {
+              "raw": "197,069",
+              "normalized": "197,069",
+              "value": 197069,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                637.32,
+                399.7445,
+                650.0398
+              ]
+            },
+            "c2": {
+              "raw": "369,362",
+              "normalized": "369,362",
+              "value": 369362,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                637.32,
+                524.6414,
+                650.0398
+              ]
+            }
+          }
+        },
+        {
+          "id": "r042",
+          "label_raw": "固定資産合計",
+          "label": "固定資産合計",
+          "depth": 2,
+          "parent_id": "r014",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "固定資産合計"
+          ],
+          "kind": "subtotal",
+          "label_x0": 88.2,
+          "source_bbox": [
+            54.72,
+            650.0398,
+            524.6414,
+            662.76
+          ],
+          "label_source_bbox": [
+            54.72,
+            650.0398,
+            274.7045,
+            662.76
+          ],
+          "cells": {
+            "c1": {
+              "raw": "1,670,426",
+              "normalized": "1,670,426",
+              "value": 1670426,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                650.0398,
+                399.7445,
+                662.76
+              ]
+            },
+            "c2": {
+              "raw": "1,757,841",
+              "normalized": "1,757,841",
+              "value": 1757841,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                650.0398,
+                524.6414,
+                662.76
+              ]
+            }
+          }
+        },
+        {
+          "id": "r043",
+          "label_raw": "資産合計",
+          "label": "資産合計",
+          "depth": 1,
+          "parent_id": "r001",
+          "path": [
+            "資産の部",
+            "資産合計"
+          ],
+          "kind": "subtotal",
+          "label_x0": 75.24,
+          "source_bbox": [
+            54.72,
+            662.76,
+            524.6414,
+            675.312
+          ],
+          "label_source_bbox": [
+            54.72,
+            662.76,
+            274.7045,
+            675.312
+          ],
+          "cells": {
+            "c1": {
+              "raw": "7,534,110",
+              "normalized": "7,534,110",
+              "value": 7534110,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                274.7045,
+                662.76,
+                399.7445,
+                675.312
+              ]
+            },
+            "c2": {
+              "raw": "5,135,249",
+              "normalized": "5,135,249",
+              "value": 5135249,
+              "status": "number",
+              "negative_zero": false,
+              "source_bbox": [
+                399.7445,
+                662.76,
+                524.6414,
+                675.312
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

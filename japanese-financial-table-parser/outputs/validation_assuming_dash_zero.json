@@ -1,0 +1,1608 @@
+{
+  "validation_version": "1.0.0",
+  "source_sha256": "0764bba6f5f0e7984a837e4cc19d8bb95db4a7ac22c26f18c95bbe652c983c74",
+  "policy": {
+    "dash_policy": "assume-zero",
+    "residual_definition": "reported minus sum of signed operands",
+    "tolerance_rule": "n displayed-unit integers for n operands; inclusive absolute bound",
+    "derivation": "Assume each of n operands and the result differs from an exact quantity by less than one displayed unit. The residual magnitude is less than n+1; because it is integer-valued, it is at most n.",
+    "qualification": "Conditional conservative presentation bound; the filing's rounding/truncation method and cause of residuals are unverified. It cannot detect all extraction errors.",
+    "nonzero_residuals": "Always reported, even within tolerance; never corrected"
+  },
+  "summary": {
+    "checks": 20,
+    "exact": 7,
+    "within_tolerance": 13,
+    "beyond_tolerance": 0,
+    "not_evaluated": 0,
+    "complete": true,
+    "requires_review": false
+  },
+  "structural_issues": [],
+  "checks": [
+    {
+      "page_index": 1,
+      "period": "2025-03-31",
+      "column_id": "c1",
+      "relation": "section_sum",
+      "target": {
+        "row_id": "r043",
+        "path": [
+          "資産の部",
+          "資産合計"
+        ],
+        "raw": "7,534,110",
+        "status": "number",
+        "value": 7534110,
+        "arithmetic_value": 7534110,
+        "assumed_zero": false
+      },
+      "operands": [
+        {
+          "row_id": "r013",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "流動資産合計"
+          ],
+          "raw": "5,863,684",
+          "status": "number",
+          "value": 5863684,
+          "arithmetic_value": 5863684,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r042",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "固定資産合計"
+          ],
+          "raw": "1,670,426",
+          "status": "number",
+          "value": 1670426,
+          "arithmetic_value": 1670426,
+          "assumed_zero": false
+        }
+      ],
+      "tolerance": 2,
+      "computed": 7534110,
+      "reported": 7534110,
+      "residual": 0,
+      "status": "exact",
+      "assumptions": [],
+      "reason": null
+    },
+    {
+      "page_index": 1,
+      "period": "2026-03-31",
+      "column_id": "c2",
+      "relation": "section_sum",
+      "target": {
+        "row_id": "r043",
+        "path": [
+          "資産の部",
+          "資産合計"
+        ],
+        "raw": "5,135,249",
+        "status": "number",
+        "value": 5135249,
+        "arithmetic_value": 5135249,
+        "assumed_zero": false
+      },
+      "operands": [
+        {
+          "row_id": "r013",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "流動資産合計"
+          ],
+          "raw": "3,377,407",
+          "status": "number",
+          "value": 3377407,
+          "arithmetic_value": 3377407,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r042",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "固定資産合計"
+          ],
+          "raw": "1,757,841",
+          "status": "number",
+          "value": 1757841,
+          "arithmetic_value": 1757841,
+          "assumed_zero": false
+        }
+      ],
+      "tolerance": 2,
+      "computed": 5135248,
+      "reported": 5135249,
+      "residual": 1,
+      "status": "within_tolerance",
+      "assumptions": [],
+      "reason": "Nonzero residual; cause unverified; reported values preserved"
+    },
+    {
+      "page_index": 1,
+      "period": "2025-03-31",
+      "column_id": "c1",
+      "relation": "section_sum",
+      "target": {
+        "row_id": "r013",
+        "path": [
+          "資産の部",
+          "流動資産",
+          "流動資産合計"
+        ],
+        "raw": "5,863,684",
+        "status": "number",
+        "value": 5863684,
+        "arithmetic_value": 5863684,
+        "assumed_zero": false
+      },
+      "operands": [
+        {
+          "row_id": "r003",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "現金及び預金"
+          ],
+          "raw": "2,002,429",
+          "status": "number",
+          "value": 2002429,
+          "arithmetic_value": 2002429,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r004",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "受取手形"
+          ],
+          "raw": "20,659",
+          "status": "number",
+          "value": 20659,
+          "arithmetic_value": 20659,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r005",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "売掛金"
+          ],
+          "raw": "2,019,476",
+          "status": "number",
+          "value": 2019476,
+          "arithmetic_value": 2019476,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r006",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "電子記録債権"
+          ],
+          "raw": "564,667",
+          "status": "number",
+          "value": 564667,
+          "arithmetic_value": 564667,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r007",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "商品及び製品"
+          ],
+          "raw": "589,488",
+          "status": "number",
+          "value": 589488,
+          "arithmetic_value": 589488,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r008",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "仕掛品"
+          ],
+          "raw": "186,748",
+          "status": "number",
+          "value": 186748,
+          "arithmetic_value": 186748,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r009",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "原材料及び貯蔵品"
+          ],
+          "raw": "370,403",
+          "status": "number",
+          "value": 370403,
+          "arithmetic_value": 370403,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r010",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "短期貸付金"
+          ],
+          "raw": "7,530",
+          "status": "number",
+          "value": 7530,
+          "arithmetic_value": 7530,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r011",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "その他"
+          ],
+          "raw": "105,260",
+          "status": "number",
+          "value": 105260,
+          "arithmetic_value": 105260,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r012",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "貸倒引当金"
+          ],
+          "raw": "△2,979",
+          "status": "number",
+          "value": -2979,
+          "arithmetic_value": -2979,
+          "assumed_zero": false
+        }
+      ],
+      "tolerance": 10,
+      "computed": 5863681,
+      "reported": 5863684,
+      "residual": 3,
+      "status": "within_tolerance",
+      "assumptions": [],
+      "reason": "Nonzero residual; cause unverified; reported values preserved"
+    },
+    {
+      "page_index": 1,
+      "period": "2026-03-31",
+      "column_id": "c2",
+      "relation": "section_sum",
+      "target": {
+        "row_id": "r013",
+        "path": [
+          "資産の部",
+          "流動資産",
+          "流動資産合計"
+        ],
+        "raw": "3,377,407",
+        "status": "number",
+        "value": 3377407,
+        "arithmetic_value": 3377407,
+        "assumed_zero": false
+      },
+      "operands": [
+        {
+          "row_id": "r003",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "現金及び預金"
+          ],
+          "raw": "608,281",
+          "status": "number",
+          "value": 608281,
+          "arithmetic_value": 608281,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r004",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "受取手形"
+          ],
+          "raw": "26,333",
+          "status": "number",
+          "value": 26333,
+          "arithmetic_value": 26333,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r005",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "売掛金"
+          ],
+          "raw": "884,339",
+          "status": "number",
+          "value": 884339,
+          "arithmetic_value": 884339,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r006",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "電子記録債権"
+          ],
+          "raw": "370,468",
+          "status": "number",
+          "value": 370468,
+          "arithmetic_value": 370468,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r007",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "商品及び製品"
+          ],
+          "raw": "1,019,663",
+          "status": "number",
+          "value": 1019663,
+          "arithmetic_value": 1019663,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r008",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "仕掛品"
+          ],
+          "raw": "55,344",
+          "status": "number",
+          "value": 55344,
+          "arithmetic_value": 55344,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r009",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "原材料及び貯蔵品"
+          ],
+          "raw": "136,082",
+          "status": "number",
+          "value": 136082,
+          "arithmetic_value": 136082,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r010",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "短期貸付金"
+          ],
+          "raw": "30,000",
+          "status": "number",
+          "value": 30000,
+          "arithmetic_value": 30000,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r011",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "その他"
+          ],
+          "raw": "246,895",
+          "status": "number",
+          "value": 246895,
+          "arithmetic_value": 246895,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r012",
+          "path": [
+            "資産の部",
+            "流動資産",
+            "貸倒引当金"
+          ],
+          "raw": "△0",
+          "status": "number",
+          "value": 0,
+          "arithmetic_value": 0,
+          "assumed_zero": false
+        }
+      ],
+      "tolerance": 10,
+      "computed": 3377405,
+      "reported": 3377407,
+      "residual": 2,
+      "status": "within_tolerance",
+      "assumptions": [],
+      "reason": "Nonzero residual; cause unverified; reported values preserved"
+    },
+    {
+      "page_index": 1,
+      "period": "2025-03-31",
+      "column_id": "c1",
+      "relation": "section_sum",
+      "target": {
+        "row_id": "r042",
+        "path": [
+          "資産の部",
+          "固定資産",
+          "固定資産合計"
+        ],
+        "raw": "1,670,426",
+        "status": "number",
+        "value": 1670426,
+        "arithmetic_value": 1670426,
+        "assumed_zero": false
+      },
+      "operands": [
+        {
+          "row_id": "r030",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "有形固定資産合計"
+          ],
+          "raw": "1,429,094",
+          "status": "number",
+          "value": 1429094,
+          "arithmetic_value": 1429094,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r034",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "無形固定資産",
+            "無形固定資産合計"
+          ],
+          "raw": "44,261",
+          "status": "number",
+          "value": 44261,
+          "arithmetic_value": 44261,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r041",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "投資その他の資産",
+            "投資その他の資産合計"
+          ],
+          "raw": "197,069",
+          "status": "number",
+          "value": 197069,
+          "arithmetic_value": 197069,
+          "assumed_zero": false
+        }
+      ],
+      "tolerance": 3,
+      "computed": 1670424,
+      "reported": 1670426,
+      "residual": 2,
+      "status": "within_tolerance",
+      "assumptions": [],
+      "reason": "Nonzero residual; cause unverified; reported values preserved"
+    },
+    {
+      "page_index": 1,
+      "period": "2026-03-31",
+      "column_id": "c2",
+      "relation": "section_sum",
+      "target": {
+        "row_id": "r042",
+        "path": [
+          "資産の部",
+          "固定資産",
+          "固定資産合計"
+        ],
+        "raw": "1,757,841",
+        "status": "number",
+        "value": 1757841,
+        "arithmetic_value": 1757841,
+        "assumed_zero": false
+      },
+      "operands": [
+        {
+          "row_id": "r030",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "有形固定資産合計"
+          ],
+          "raw": "1,352,610",
+          "status": "number",
+          "value": 1352610,
+          "arithmetic_value": 1352610,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r034",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "無形固定資産",
+            "無形固定資産合計"
+          ],
+          "raw": "35,869",
+          "status": "number",
+          "value": 35869,
+          "arithmetic_value": 35869,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r041",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "投資その他の資産",
+            "投資その他の資産合計"
+          ],
+          "raw": "369,362",
+          "status": "number",
+          "value": 369362,
+          "arithmetic_value": 369362,
+          "assumed_zero": false
+        }
+      ],
+      "tolerance": 3,
+      "computed": 1757841,
+      "reported": 1757841,
+      "residual": 0,
+      "status": "exact",
+      "assumptions": [],
+      "reason": null
+    },
+    {
+      "page_index": 1,
+      "period": "2025-03-31",
+      "column_id": "c1",
+      "relation": "section_sum",
+      "target": {
+        "row_id": "r030",
+        "path": [
+          "資産の部",
+          "固定資産",
+          "有形固定資産",
+          "有形固定資産合計"
+        ],
+        "raw": "1,429,094",
+        "status": "number",
+        "value": 1429094,
+        "arithmetic_value": 1429094,
+        "assumed_zero": false
+      },
+      "operands": [
+        {
+          "row_id": "r018",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "建物及び構築物",
+            "建物及び構築物(純額)"
+          ],
+          "raw": "197,775",
+          "status": "number",
+          "value": 197775,
+          "arithmetic_value": 197775,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r021",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "機械装置及び運搬具",
+            "機械装置及び運搬具(純額)"
+          ],
+          "raw": "390,757",
+          "status": "number",
+          "value": 390757,
+          "arithmetic_value": 390757,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r022",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "土地"
+          ],
+          "raw": "768,976",
+          "status": "number",
+          "value": 768976,
+          "arithmetic_value": 768976,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r025",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "リース資産",
+            "リース資産(純額)"
+          ],
+          "raw": "63,146",
+          "status": "number",
+          "value": 63146,
+          "arithmetic_value": 63146,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r026",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "建設仮勘定"
+          ],
+          "raw": "－",
+          "status": "dash",
+          "value": null,
+          "arithmetic_value": 0,
+          "assumed_zero": true
+        },
+        {
+          "row_id": "r029",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "その他",
+            "その他(純額)"
+          ],
+          "raw": "8,439",
+          "status": "number",
+          "value": 8439,
+          "arithmetic_value": 8439,
+          "assumed_zero": false
+        }
+      ],
+      "tolerance": 6,
+      "computed": 1429093,
+      "reported": 1429094,
+      "residual": 1,
+      "status": "within_tolerance",
+      "assumptions": [
+        "Explicit dash operands provisionally treated as zero by user-selected policy"
+      ],
+      "reason": "Nonzero residual; cause unverified; reported values preserved"
+    },
+    {
+      "page_index": 1,
+      "period": "2026-03-31",
+      "column_id": "c2",
+      "relation": "section_sum",
+      "target": {
+        "row_id": "r030",
+        "path": [
+          "資産の部",
+          "固定資産",
+          "有形固定資産",
+          "有形固定資産合計"
+        ],
+        "raw": "1,352,610",
+        "status": "number",
+        "value": 1352610,
+        "arithmetic_value": 1352610,
+        "assumed_zero": false
+      },
+      "operands": [
+        {
+          "row_id": "r018",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "建物及び構築物",
+            "建物及び構築物(純額)"
+          ],
+          "raw": "239,828",
+          "status": "number",
+          "value": 239828,
+          "arithmetic_value": 239828,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r021",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "機械装置及び運搬具",
+            "機械装置及び運搬具(純額)"
+          ],
+          "raw": "336,708",
+          "status": "number",
+          "value": 336708,
+          "arithmetic_value": 336708,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r022",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "土地"
+          ],
+          "raw": "705,403",
+          "status": "number",
+          "value": 705403,
+          "arithmetic_value": 705403,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r025",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "リース資産",
+            "リース資産(純額)"
+          ],
+          "raw": "41,872",
+          "status": "number",
+          "value": 41872,
+          "arithmetic_value": 41872,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r026",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "建設仮勘定"
+          ],
+          "raw": "4,553",
+          "status": "number",
+          "value": 4553,
+          "arithmetic_value": 4553,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r029",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "その他",
+            "その他(純額)"
+          ],
+          "raw": "24,243",
+          "status": "number",
+          "value": 24243,
+          "arithmetic_value": 24243,
+          "assumed_zero": false
+        }
+      ],
+      "tolerance": 6,
+      "computed": 1352607,
+      "reported": 1352610,
+      "residual": 3,
+      "status": "within_tolerance",
+      "assumptions": [],
+      "reason": "Nonzero residual; cause unverified; reported values preserved"
+    },
+    {
+      "page_index": 1,
+      "period": "2025-03-31",
+      "column_id": "c1",
+      "relation": "section_sum",
+      "target": {
+        "row_id": "r034",
+        "path": [
+          "資産の部",
+          "固定資産",
+          "無形固定資産",
+          "無形固定資産合計"
+        ],
+        "raw": "44,261",
+        "status": "number",
+        "value": 44261,
+        "arithmetic_value": 44261,
+        "assumed_zero": false
+      },
+      "operands": [
+        {
+          "row_id": "r032",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "無形固定資産",
+            "リース資産"
+          ],
+          "raw": "34,190",
+          "status": "number",
+          "value": 34190,
+          "arithmetic_value": 34190,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r033",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "無形固定資産",
+            "その他"
+          ],
+          "raw": "10,070",
+          "status": "number",
+          "value": 10070,
+          "arithmetic_value": 10070,
+          "assumed_zero": false
+        }
+      ],
+      "tolerance": 2,
+      "computed": 44260,
+      "reported": 44261,
+      "residual": 1,
+      "status": "within_tolerance",
+      "assumptions": [],
+      "reason": "Nonzero residual; cause unverified; reported values preserved"
+    },
+    {
+      "page_index": 1,
+      "period": "2026-03-31",
+      "column_id": "c2",
+      "relation": "section_sum",
+      "target": {
+        "row_id": "r034",
+        "path": [
+          "資産の部",
+          "固定資産",
+          "無形固定資産",
+          "無形固定資産合計"
+        ],
+        "raw": "35,869",
+        "status": "number",
+        "value": 35869,
+        "arithmetic_value": 35869,
+        "assumed_zero": false
+      },
+      "operands": [
+        {
+          "row_id": "r032",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "無形固定資産",
+            "リース資産"
+          ],
+          "raw": "21,402",
+          "status": "number",
+          "value": 21402,
+          "arithmetic_value": 21402,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r033",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "無形固定資産",
+            "その他"
+          ],
+          "raw": "14,466",
+          "status": "number",
+          "value": 14466,
+          "arithmetic_value": 14466,
+          "assumed_zero": false
+        }
+      ],
+      "tolerance": 2,
+      "computed": 35868,
+      "reported": 35869,
+      "residual": 1,
+      "status": "within_tolerance",
+      "assumptions": [],
+      "reason": "Nonzero residual; cause unverified; reported values preserved"
+    },
+    {
+      "page_index": 1,
+      "period": "2025-03-31",
+      "column_id": "c1",
+      "relation": "section_sum",
+      "target": {
+        "row_id": "r041",
+        "path": [
+          "資産の部",
+          "固定資産",
+          "投資その他の資産",
+          "投資その他の資産合計"
+        ],
+        "raw": "197,069",
+        "status": "number",
+        "value": 197069,
+        "arithmetic_value": 197069,
+        "assumed_zero": false
+      },
+      "operands": [
+        {
+          "row_id": "r036",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "投資その他の資産",
+            "投資有価証券"
+          ],
+          "raw": "44,180",
+          "status": "number",
+          "value": 44180,
+          "arithmetic_value": 44180,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r037",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "投資その他の資産",
+            "関係会社株式"
+          ],
+          "raw": "1,123",
+          "status": "number",
+          "value": 1123,
+          "arithmetic_value": 1123,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r038",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "投資その他の資産",
+            "長期貸付金"
+          ],
+          "raw": "－",
+          "status": "dash",
+          "value": null,
+          "arithmetic_value": 0,
+          "assumed_zero": true
+        },
+        {
+          "row_id": "r039",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "投資その他の資産",
+            "退職給付に係る資産"
+          ],
+          "raw": "18,404",
+          "status": "number",
+          "value": 18404,
+          "arithmetic_value": 18404,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r040",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "投資その他の資産",
+            "その他"
+          ],
+          "raw": "133,361",
+          "status": "number",
+          "value": 133361,
+          "arithmetic_value": 133361,
+          "assumed_zero": false
+        }
+      ],
+      "tolerance": 5,
+      "computed": 197068,
+      "reported": 197069,
+      "residual": 1,
+      "status": "within_tolerance",
+      "assumptions": [
+        "Explicit dash operands provisionally treated as zero by user-selected policy"
+      ],
+      "reason": "Nonzero residual; cause unverified; reported values preserved"
+    },
+    {
+      "page_index": 1,
+      "period": "2026-03-31",
+      "column_id": "c2",
+      "relation": "section_sum",
+      "target": {
+        "row_id": "r041",
+        "path": [
+          "資産の部",
+          "固定資産",
+          "投資その他の資産",
+          "投資その他の資産合計"
+        ],
+        "raw": "369,362",
+        "status": "number",
+        "value": 369362,
+        "arithmetic_value": 369362,
+        "assumed_zero": false
+      },
+      "operands": [
+        {
+          "row_id": "r036",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "投資その他の資産",
+            "投資有価証券"
+          ],
+          "raw": "218,836",
+          "status": "number",
+          "value": 218836,
+          "arithmetic_value": 218836,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r037",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "投資その他の資産",
+            "関係会社株式"
+          ],
+          "raw": "1,123",
+          "status": "number",
+          "value": 1123,
+          "arithmetic_value": 1123,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r038",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "投資その他の資産",
+            "長期貸付金"
+          ],
+          "raw": "62,000",
+          "status": "number",
+          "value": 62000,
+          "arithmetic_value": 62000,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r039",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "投資その他の資産",
+            "退職給付に係る資産"
+          ],
+          "raw": "16,435",
+          "status": "number",
+          "value": 16435,
+          "arithmetic_value": 16435,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r040",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "投資その他の資産",
+            "その他"
+          ],
+          "raw": "70,967",
+          "status": "number",
+          "value": 70967,
+          "arithmetic_value": 70967,
+          "assumed_zero": false
+        }
+      ],
+      "tolerance": 5,
+      "computed": 369361,
+      "reported": 369362,
+      "residual": 1,
+      "status": "within_tolerance",
+      "assumptions": [],
+      "reason": "Nonzero residual; cause unverified; reported values preserved"
+    },
+    {
+      "page_index": 1,
+      "period": "2025-03-31",
+      "column_id": "c1",
+      "relation": "gross_plus_signed_depreciation",
+      "target": {
+        "row_id": "r018",
+        "path": [
+          "資産の部",
+          "固定資産",
+          "有形固定資産",
+          "建物及び構築物",
+          "建物及び構築物(純額)"
+        ],
+        "raw": "197,775",
+        "status": "number",
+        "value": 197775,
+        "arithmetic_value": 197775,
+        "assumed_zero": false
+      },
+      "operands": [
+        {
+          "row_id": "r016",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "建物及び構築物"
+          ],
+          "raw": "2,121,360",
+          "status": "number",
+          "value": 2121360,
+          "arithmetic_value": 2121360,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r017",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "建物及び構築物",
+            "減価償却累計額"
+          ],
+          "raw": "△1,923,585",
+          "status": "number",
+          "value": -1923585,
+          "arithmetic_value": -1923585,
+          "assumed_zero": false
+        }
+      ],
+      "tolerance": 2,
+      "computed": 197775,
+      "reported": 197775,
+      "residual": 0,
+      "status": "exact",
+      "assumptions": [],
+      "reason": null
+    },
+    {
+      "page_index": 1,
+      "period": "2026-03-31",
+      "column_id": "c2",
+      "relation": "gross_plus_signed_depreciation",
+      "target": {
+        "row_id": "r018",
+        "path": [
+          "資産の部",
+          "固定資産",
+          "有形固定資産",
+          "建物及び構築物",
+          "建物及び構築物(純額)"
+        ],
+        "raw": "239,828",
+        "status": "number",
+        "value": 239828,
+        "arithmetic_value": 239828,
+        "assumed_zero": false
+      },
+      "operands": [
+        {
+          "row_id": "r016",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "建物及び構築物"
+          ],
+          "raw": "1,880,082",
+          "status": "number",
+          "value": 1880082,
+          "arithmetic_value": 1880082,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r017",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "建物及び構築物",
+            "減価償却累計額"
+          ],
+          "raw": "△1,640,253",
+          "status": "number",
+          "value": -1640253,
+          "arithmetic_value": -1640253,
+          "assumed_zero": false
+        }
+      ],
+      "tolerance": 2,
+      "computed": 239829,
+      "reported": 239828,
+      "residual": -1,
+      "status": "within_tolerance",
+      "assumptions": [],
+      "reason": "Nonzero residual; cause unverified; reported values preserved"
+    },
+    {
+      "page_index": 1,
+      "period": "2025-03-31",
+      "column_id": "c1",
+      "relation": "gross_plus_signed_depreciation",
+      "target": {
+        "row_id": "r021",
+        "path": [
+          "資産の部",
+          "固定資産",
+          "有形固定資産",
+          "機械装置及び運搬具",
+          "機械装置及び運搬具(純額)"
+        ],
+        "raw": "390,757",
+        "status": "number",
+        "value": 390757,
+        "arithmetic_value": 390757,
+        "assumed_zero": false
+      },
+      "operands": [
+        {
+          "row_id": "r019",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "機械装置及び運搬具"
+          ],
+          "raw": "4,024,922",
+          "status": "number",
+          "value": 4024922,
+          "arithmetic_value": 4024922,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r020",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "機械装置及び運搬具",
+            "減価償却累計額"
+          ],
+          "raw": "△3,634,165",
+          "status": "number",
+          "value": -3634165,
+          "arithmetic_value": -3634165,
+          "assumed_zero": false
+        }
+      ],
+      "tolerance": 2,
+      "computed": 390757,
+      "reported": 390757,
+      "residual": 0,
+      "status": "exact",
+      "assumptions": [],
+      "reason": null
+    },
+    {
+      "page_index": 1,
+      "period": "2026-03-31",
+      "column_id": "c2",
+      "relation": "gross_plus_signed_depreciation",
+      "target": {
+        "row_id": "r021",
+        "path": [
+          "資産の部",
+          "固定資産",
+          "有形固定資産",
+          "機械装置及び運搬具",
+          "機械装置及び運搬具(純額)"
+        ],
+        "raw": "336,708",
+        "status": "number",
+        "value": 336708,
+        "arithmetic_value": 336708,
+        "assumed_zero": false
+      },
+      "operands": [
+        {
+          "row_id": "r019",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "機械装置及び運搬具"
+          ],
+          "raw": "2,250,799",
+          "status": "number",
+          "value": 2250799,
+          "arithmetic_value": 2250799,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r020",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "機械装置及び運搬具",
+            "減価償却累計額"
+          ],
+          "raw": "△1,914,091",
+          "status": "number",
+          "value": -1914091,
+          "arithmetic_value": -1914091,
+          "assumed_zero": false
+        }
+      ],
+      "tolerance": 2,
+      "computed": 336708,
+      "reported": 336708,
+      "residual": 0,
+      "status": "exact",
+      "assumptions": [],
+      "reason": null
+    },
+    {
+      "page_index": 1,
+      "period": "2025-03-31",
+      "column_id": "c1",
+      "relation": "gross_plus_signed_depreciation",
+      "target": {
+        "row_id": "r025",
+        "path": [
+          "資産の部",
+          "固定資産",
+          "有形固定資産",
+          "リース資産",
+          "リース資産(純額)"
+        ],
+        "raw": "63,146",
+        "status": "number",
+        "value": 63146,
+        "arithmetic_value": 63146,
+        "assumed_zero": false
+      },
+      "operands": [
+        {
+          "row_id": "r023",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "リース資産"
+          ],
+          "raw": "210,746",
+          "status": "number",
+          "value": 210746,
+          "arithmetic_value": 210746,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r024",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "リース資産",
+            "減価償却累計額"
+          ],
+          "raw": "△147,599",
+          "status": "number",
+          "value": -147599,
+          "arithmetic_value": -147599,
+          "assumed_zero": false
+        }
+      ],
+      "tolerance": 2,
+      "computed": 63147,
+      "reported": 63146,
+      "residual": -1,
+      "status": "within_tolerance",
+      "assumptions": [],
+      "reason": "Nonzero residual; cause unverified; reported values preserved"
+    },
+    {
+      "page_index": 1,
+      "period": "2026-03-31",
+      "column_id": "c2",
+      "relation": "gross_plus_signed_depreciation",
+      "target": {
+        "row_id": "r025",
+        "path": [
+          "資産の部",
+          "固定資産",
+          "有形固定資産",
+          "リース資産",
+          "リース資産(純額)"
+        ],
+        "raw": "41,872",
+        "status": "number",
+        "value": 41872,
+        "arithmetic_value": 41872,
+        "assumed_zero": false
+      },
+      "operands": [
+        {
+          "row_id": "r023",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "リース資産"
+          ],
+          "raw": "213,939",
+          "status": "number",
+          "value": 213939,
+          "arithmetic_value": 213939,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r024",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "リース資産",
+            "減価償却累計額"
+          ],
+          "raw": "△172,066",
+          "status": "number",
+          "value": -172066,
+          "arithmetic_value": -172066,
+          "assumed_zero": false
+        }
+      ],
+      "tolerance": 2,
+      "computed": 41873,
+      "reported": 41872,
+      "residual": -1,
+      "status": "within_tolerance",
+      "assumptions": [],
+      "reason": "Nonzero residual; cause unverified; reported values preserved"
+    },
+    {
+      "page_index": 1,
+      "period": "2025-03-31",
+      "column_id": "c1",
+      "relation": "gross_plus_signed_depreciation",
+      "target": {
+        "row_id": "r029",
+        "path": [
+          "資産の部",
+          "固定資産",
+          "有形固定資産",
+          "その他",
+          "その他(純額)"
+        ],
+        "raw": "8,439",
+        "status": "number",
+        "value": 8439,
+        "arithmetic_value": 8439,
+        "assumed_zero": false
+      },
+      "operands": [
+        {
+          "row_id": "r027",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "その他"
+          ],
+          "raw": "848,814",
+          "status": "number",
+          "value": 848814,
+          "arithmetic_value": 848814,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r028",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "その他",
+            "減価償却累計額"
+          ],
+          "raw": "△840,375",
+          "status": "number",
+          "value": -840375,
+          "arithmetic_value": -840375,
+          "assumed_zero": false
+        }
+      ],
+      "tolerance": 2,
+      "computed": 8439,
+      "reported": 8439,
+      "residual": 0,
+      "status": "exact",
+      "assumptions": [],
+      "reason": null
+    },
+    {
+      "page_index": 1,
+      "period": "2026-03-31",
+      "column_id": "c2",
+      "relation": "gross_plus_signed_depreciation",
+      "target": {
+        "row_id": "r029",
+        "path": [
+          "資産の部",
+          "固定資産",
+          "有形固定資産",
+          "その他",
+          "その他(純額)"
+        ],
+        "raw": "24,243",
+        "status": "number",
+        "value": 24243,
+        "arithmetic_value": 24243,
+        "assumed_zero": false
+      },
+      "operands": [
+        {
+          "row_id": "r027",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "その他"
+          ],
+          "raw": "446,126",
+          "status": "number",
+          "value": 446126,
+          "arithmetic_value": 446126,
+          "assumed_zero": false
+        },
+        {
+          "row_id": "r028",
+          "path": [
+            "資産の部",
+            "固定資産",
+            "有形固定資産",
+            "その他",
+            "減価償却累計額"
+          ],
+          "raw": "△421,883",
+          "status": "number",
+          "value": -421883,
+          "arithmetic_value": -421883,
+          "assumed_zero": false
+        }
+      ],
+      "tolerance": 2,
+      "computed": 24243,
+      "reported": 24243,
+      "residual": 0,
+      "status": "exact",
+      "assumptions": [],
+      "reason": null
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "scope": "Ten synthetic scenarios from ONE source page; no OCR/VLM is executed",
+  "warning": "Expected accepted corruptions are included. Expectation agreement is NOT extraction accuracy or error-detection recall.",
+  "summary": {
+    "scenarios": 10,
+    "expectations_met": 10,
+    "known_blind_spots": [
+      "one_unit_error",
+      "compensating_errors"
+    ]
+  },
+  "scenarios": [
+    {
+      "scenario": "original",
+      "category": "control",
+      "fixture": "data/balance_sheet_after_correction.pdf",
+      "expected_decision": "accept_with_diagnostics",
+      "actual_decisions": [
+        "accept_with_diagnostics"
+      ],
+      "semantic_content_matches_original": true,
+      "expectation_met": true,
+      "routing_report": "outputs/robustness/original_routing.json"
+    },
+    {
+      "scenario": "translated_page",
+      "category": "geometry",
+      "fixture": "outputs/robustness/fixtures/translated_page.pdf",
+      "expected_decision": "accept_with_diagnostics",
+      "actual_decisions": [
+        "accept_with_diagnostics"
+      ],
+      "semantic_content_matches_original": true,
+      "expectation_met": true,
+      "routing_report": "outputs/robustness/translated_page_routing.json"
+    },
+    {
+      "scenario": "rasterized_scan",
+      "category": "scan",
+      "fixture": "outputs/robustness/fixtures/rasterized_scan.pdf",
+      "expected_decision": "ocr_required",
+      "actual_decisions": [
+        "ocr_required"
+      ],
+      "semantic_content_matches_original": null,
+      "expectation_met": true,
+      "routing_report": "outputs/robustness/rasterized_scan_routing.json"
+    },
+    {
+      "scenario": "shifted_amount_alignment",
+      "category": "geometry",
+      "fixture": "outputs/robustness/fixtures/shifted_amount_alignment.pdf",
+      "expected_decision": "accept_with_diagnostics",
+      "actual_decisions": [
+        "accept_with_diagnostics"
+      ],
+      "semantic_content_matches_original": true,
+      "expectation_met": true,
+      "routing_report": "outputs/robustness/shifted_amount_alignment_routing.json"
+    },
+    {
+      "scenario": "digit_transposition",
+      "category": "detectable_corruption",
+      "fixture": "outputs/robustness/fixtures/digit_transposition.pdf",
+      "expected_decision": "human_review",
+      "actual_decisions": [
+        "human_review"
+      ],
+      "semantic_content_matches_original": null,
+      "expectation_met": true,
+      "routing_report": "outputs/robustness/digit_transposition_routing.json"
+    },
+    {
+      "scenario": "unknown_section",
+      "category": "unsupported_structure",
+      "fixture": "outputs/robustness/fixtures/unknown_section.pdf",
+      "expected_decision": "structure_review",
+      "actual_decisions": [
+        "structure_review"
+      ],
+      "semantic_content_matches_original": null,
+      "expectation_met": true,
+      "routing_report": "outputs/robustness/unknown_section_routing.json"
+    },
+    {
+      "scenario": "column_collision",
+      "category": "unsupported_structure",
+      "fixture": "outputs/robustness/fixtures/column_collision.pdf",
+      "expected_decision": "extraction_review",
+      "actual_decisions": [
+        "extraction_review"
+      ],
+      "semantic_content_matches_original": null,
+      "expectation_met": true,
+      "routing_report": "outputs/robustness/column_collision_routing.json"
+    },
+    {
+      "scenario": "one_unit_error",
+      "category": "known_blind_spot",
+      "fixture": "outputs/robustness/fixtures/one_unit_error.pdf",
+      "expected_decision": "accept_with_diagnostics",
+      "actual_decisions": [
+        "accept_with_diagnostics"
+      ],
+      "semantic_content_matches_original": null,
+      "expectation_met": true,
+      "routing_report": "outputs/robustness/one_unit_error_routing.json"
+    },
+    {
+      "scenario": "compensating_errors",
+      "category": "known_blind_spot",
+      "fixture": "outputs/robustness/fixtures/compensating_errors.pdf",
+      "expected_decision": "accept_with_diagnostics",
+      "actual_decisions": [
+        "accept_with_diagnostics"
+      ],
+      "semantic_content_matches_original": null,
+      "expectation_met": true,
+      "routing_report": "outputs/robustness/compensating_errors_routing.json"
+    },
+    {
+      "scenario": "dropped_negative_sign",
+      "category": "detectable_corruption",
+      "fixture": "outputs/robustness/fixtures/dropped_negative_sign.pdf",
+      "expected_decision": "human_review",
+      "actual_decisions": [
+        "human_review"
+      ],
+      "semantic_content_matches_original": null,
+      "expectation_met": true,
+      "routing_report": "outputs/robustness/dropped_negative_sign_routing.json"
+    }
+  ]
+}

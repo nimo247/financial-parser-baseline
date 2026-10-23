@@ -1,0 +1,28 @@
+{
+  "router_version": "1.0.0",
+  "source": {
+    "filename": "column_collision.pdf",
+    "sha256": "92a301c7b90a4a19319f923c9a0cb935e7ec729808d530390ac5083cca68760c"
+  },
+  "scope": "Heuristic routing for the declared assets-only baseline; no OCR/VLM executed",
+  "summary": {
+    "pages": 1,
+    "decisions": {
+      "extraction_review": 1
+    },
+    "action_required": true
+  },
+  "pages": [
+    {
+      "page_index": 1,
+      "decision": "extraction_review",
+      "reasons": [
+        "Unrecognized value token '2,060028,,242819'"
+      ],
+      "row_count": null,
+      "validation_summary": null,
+      "structural_issues": [],
+      "extraction_error_code": "extraction_review"
+    }
+  ]
+}

@@ -1,0 +1,1212 @@
+{
+  "reference_version": "1.0.0",
+  "source_sha256": "0764bba6f5f0e7984a837e4cc19d8bb95db4a7ac22c26f18c95bbe652c983c74",
+  "provenance": {
+    "method": "AI-assisted manual transcription and visual review of rendered source",
+    "independent_of_parser_output": true,
+    "independent_human_review": false,
+    "limitations": "Same assistant authored parser and reference; independent human review is pending."
+  },
+  "metadata": {
+    "page_index": 1,
+    "printed_page_number": 4,
+    "currency": "JPY",
+    "unit_raw": "千円",
+    "unit_multiplier": 1000,
+    "correction_marker_raw": "（訂正後）",
+    "periods": [
+      "2025-03-31",
+      "2026-03-31"
+    ]
+  },
+  "rows": [
+    {
+      "id": "r001",
+      "parent_id": null,
+      "depth": 0,
+      "kind": "section",
+      "label_raw": "資産の部",
+      "label": "資産の部",
+      "path": [
+        "資産の部"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "",
+          "value": null,
+          "status": "blank",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "",
+          "value": null,
+          "status": "blank",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r002",
+      "parent_id": "r001",
+      "depth": 1,
+      "kind": "section",
+      "label_raw": "流動資産",
+      "label": "流動資産",
+      "path": [
+        "資産の部",
+        "流動資産"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "",
+          "value": null,
+          "status": "blank",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "",
+          "value": null,
+          "status": "blank",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r003",
+      "parent_id": "r002",
+      "depth": 2,
+      "kind": "item",
+      "label_raw": "現金及び預金",
+      "label": "現金及び預金",
+      "path": [
+        "資産の部",
+        "流動資産",
+        "現金及び預金"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "2,002,429",
+          "value": 2002429,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "608,281",
+          "value": 608281,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r004",
+      "parent_id": "r002",
+      "depth": 2,
+      "kind": "item",
+      "label_raw": "受取手形",
+      "label": "受取手形",
+      "path": [
+        "資産の部",
+        "流動資産",
+        "受取手形"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "20,659",
+          "value": 20659,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "26,333",
+          "value": 26333,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r005",
+      "parent_id": "r002",
+      "depth": 2,
+      "kind": "item",
+      "label_raw": "売掛金",
+      "label": "売掛金",
+      "path": [
+        "資産の部",
+        "流動資産",
+        "売掛金"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "2,019,476",
+          "value": 2019476,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "884,339",
+          "value": 884339,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r006",
+      "parent_id": "r002",
+      "depth": 2,
+      "kind": "item",
+      "label_raw": "電子記録債権",
+      "label": "電子記録債権",
+      "path": [
+        "資産の部",
+        "流動資産",
+        "電子記録債権"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "564,667",
+          "value": 564667,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "370,468",
+          "value": 370468,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r007",
+      "parent_id": "r002",
+      "depth": 2,
+      "kind": "item",
+      "label_raw": "商品及び製品",
+      "label": "商品及び製品",
+      "path": [
+        "資産の部",
+        "流動資産",
+        "商品及び製品"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "589,488",
+          "value": 589488,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "1,019,663",
+          "value": 1019663,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r008",
+      "parent_id": "r002",
+      "depth": 2,
+      "kind": "item",
+      "label_raw": "仕掛品",
+      "label": "仕掛品",
+      "path": [
+        "資産の部",
+        "流動資産",
+        "仕掛品"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "186,748",
+          "value": 186748,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "55,344",
+          "value": 55344,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r009",
+      "parent_id": "r002",
+      "depth": 2,
+      "kind": "item",
+      "label_raw": "原材料及び貯蔵品",
+      "label": "原材料及び貯蔵品",
+      "path": [
+        "資産の部",
+        "流動資産",
+        "原材料及び貯蔵品"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "370,403",
+          "value": 370403,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "136,082",
+          "value": 136082,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r010",
+      "parent_id": "r002",
+      "depth": 2,
+      "kind": "item",
+      "label_raw": "短期貸付金",
+      "label": "短期貸付金",
+      "path": [
+        "資産の部",
+        "流動資産",
+        "短期貸付金"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "7,530",
+          "value": 7530,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "30,000",
+          "value": 30000,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r011",
+      "parent_id": "r002",
+      "depth": 2,
+      "kind": "item",
+      "label_raw": "その他",
+      "label": "その他",
+      "path": [
+        "資産の部",
+        "流動資産",
+        "その他"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "105,260",
+          "value": 105260,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "246,895",
+          "value": 246895,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r012",
+      "parent_id": "r002",
+      "depth": 2,
+      "kind": "item",
+      "label_raw": "貸倒引当金",
+      "label": "貸倒引当金",
+      "path": [
+        "資産の部",
+        "流動資産",
+        "貸倒引当金"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "△2,979",
+          "value": -2979,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "△0",
+          "value": 0,
+          "status": "number",
+          "negative_zero": true
+        }
+      }
+    },
+    {
+      "id": "r013",
+      "parent_id": "r002",
+      "depth": 2,
+      "kind": "subtotal",
+      "label_raw": "流動資産合計",
+      "label": "流動資産合計",
+      "path": [
+        "資産の部",
+        "流動資産",
+        "流動資産合計"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "5,863,684",
+          "value": 5863684,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "3,377,407",
+          "value": 3377407,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r014",
+      "parent_id": "r001",
+      "depth": 1,
+      "kind": "section",
+      "label_raw": "固定資産",
+      "label": "固定資産",
+      "path": [
+        "資産の部",
+        "固定資産"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "",
+          "value": null,
+          "status": "blank",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "",
+          "value": null,
+          "status": "blank",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r015",
+      "parent_id": "r014",
+      "depth": 2,
+      "kind": "section",
+      "label_raw": "有形固定資産",
+      "label": "有形固定資産",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "有形固定資産"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "",
+          "value": null,
+          "status": "blank",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "",
+          "value": null,
+          "status": "blank",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r016",
+      "parent_id": "r015",
+      "depth": 3,
+      "kind": "item",
+      "label_raw": "建物及び構築物",
+      "label": "建物及び構築物",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "有形固定資産",
+        "建物及び構築物"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "2,121,360",
+          "value": 2121360,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "1,880,082",
+          "value": 1880082,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r017",
+      "parent_id": "r016",
+      "depth": 4,
+      "kind": "item",
+      "label_raw": "減価償却累計額",
+      "label": "減価償却累計額",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "有形固定資産",
+        "建物及び構築物",
+        "減価償却累計額"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "△1,923,585",
+          "value": -1923585,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "△1,640,253",
+          "value": -1640253,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r018",
+      "parent_id": "r016",
+      "depth": 4,
+      "kind": "net",
+      "label_raw": "建物及び構築物（純額）",
+      "label": "建物及び構築物(純額)",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "有形固定資産",
+        "建物及び構築物",
+        "建物及び構築物(純額)"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "197,775",
+          "value": 197775,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "239,828",
+          "value": 239828,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r019",
+      "parent_id": "r015",
+      "depth": 3,
+      "kind": "item",
+      "label_raw": "機械装置及び運搬具",
+      "label": "機械装置及び運搬具",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "有形固定資産",
+        "機械装置及び運搬具"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "4,024,922",
+          "value": 4024922,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "2,250,799",
+          "value": 2250799,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r020",
+      "parent_id": "r019",
+      "depth": 4,
+      "kind": "item",
+      "label_raw": "減価償却累計額",
+      "label": "減価償却累計額",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "有形固定資産",
+        "機械装置及び運搬具",
+        "減価償却累計額"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "△3,634,165",
+          "value": -3634165,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "△1,914,091",
+          "value": -1914091,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r021",
+      "parent_id": "r019",
+      "depth": 4,
+      "kind": "net",
+      "label_raw": "機械装置及び運搬具（純額）",
+      "label": "機械装置及び運搬具(純額)",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "有形固定資産",
+        "機械装置及び運搬具",
+        "機械装置及び運搬具(純額)"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "390,757",
+          "value": 390757,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "336,708",
+          "value": 336708,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r022",
+      "parent_id": "r015",
+      "depth": 3,
+      "kind": "item",
+      "label_raw": "土地",
+      "label": "土地",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "有形固定資産",
+        "土地"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "768,976",
+          "value": 768976,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "705,403",
+          "value": 705403,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r023",
+      "parent_id": "r015",
+      "depth": 3,
+      "kind": "item",
+      "label_raw": "リース資産",
+      "label": "リース資産",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "有形固定資産",
+        "リース資産"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "210,746",
+          "value": 210746,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "213,939",
+          "value": 213939,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r024",
+      "parent_id": "r023",
+      "depth": 4,
+      "kind": "item",
+      "label_raw": "減価償却累計額",
+      "label": "減価償却累計額",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "有形固定資産",
+        "リース資産",
+        "減価償却累計額"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "△147,599",
+          "value": -147599,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "△172,066",
+          "value": -172066,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r025",
+      "parent_id": "r023",
+      "depth": 4,
+      "kind": "net",
+      "label_raw": "リース資産（純額）",
+      "label": "リース資産(純額)",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "有形固定資産",
+        "リース資産",
+        "リース資産(純額)"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "63,146",
+          "value": 63146,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "41,872",
+          "value": 41872,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r026",
+      "parent_id": "r015",
+      "depth": 3,
+      "kind": "item",
+      "label_raw": "建設仮勘定",
+      "label": "建設仮勘定",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "有形固定資産",
+        "建設仮勘定"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "－",
+          "value": null,
+          "status": "dash",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "4,553",
+          "value": 4553,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r027",
+      "parent_id": "r015",
+      "depth": 3,
+      "kind": "item",
+      "label_raw": "その他",
+      "label": "その他",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "有形固定資産",
+        "その他"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "848,814",
+          "value": 848814,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "446,126",
+          "value": 446126,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r028",
+      "parent_id": "r027",
+      "depth": 4,
+      "kind": "item",
+      "label_raw": "減価償却累計額",
+      "label": "減価償却累計額",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "有形固定資産",
+        "その他",
+        "減価償却累計額"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "△840,375",
+          "value": -840375,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "△421,883",
+          "value": -421883,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r029",
+      "parent_id": "r027",
+      "depth": 4,
+      "kind": "net",
+      "label_raw": "その他（純額）",
+      "label": "その他(純額)",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "有形固定資産",
+        "その他",
+        "その他(純額)"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "8,439",
+          "value": 8439,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "24,243",
+          "value": 24243,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r030",
+      "parent_id": "r015",
+      "depth": 3,
+      "kind": "subtotal",
+      "label_raw": "有形固定資産合計",
+      "label": "有形固定資産合計",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "有形固定資産",
+        "有形固定資産合計"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "1,429,094",
+          "value": 1429094,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "1,352,610",
+          "value": 1352610,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r031",
+      "parent_id": "r014",
+      "depth": 2,
+      "kind": "section",
+      "label_raw": "無形固定資産",
+      "label": "無形固定資産",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "無形固定資産"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "",
+          "value": null,
+          "status": "blank",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "",
+          "value": null,
+          "status": "blank",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r032",
+      "parent_id": "r031",
+      "depth": 3,
+      "kind": "item",
+      "label_raw": "リース資産",
+      "label": "リース資産",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "無形固定資産",
+        "リース資産"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "34,190",
+          "value": 34190,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "21,402",
+          "value": 21402,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r033",
+      "parent_id": "r031",
+      "depth": 3,
+      "kind": "item",
+      "label_raw": "その他",
+      "label": "その他",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "無形固定資産",
+        "その他"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "10,070",
+          "value": 10070,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "14,466",
+          "value": 14466,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r034",
+      "parent_id": "r031",
+      "depth": 3,
+      "kind": "subtotal",
+      "label_raw": "無形固定資産合計",
+      "label": "無形固定資産合計",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "無形固定資産",
+        "無形固定資産合計"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "44,261",
+          "value": 44261,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "35,869",
+          "value": 35869,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r035",
+      "parent_id": "r014",
+      "depth": 2,
+      "kind": "section",
+      "label_raw": "投資その他の資産",
+      "label": "投資その他の資産",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "投資その他の資産"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "",
+          "value": null,
+          "status": "blank",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "",
+          "value": null,
+          "status": "blank",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r036",
+      "parent_id": "r035",
+      "depth": 3,
+      "kind": "item",
+      "label_raw": "投資有価証券",
+      "label": "投資有価証券",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "投資その他の資産",
+        "投資有価証券"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "44,180",
+          "value": 44180,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "218,836",
+          "value": 218836,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r037",
+      "parent_id": "r035",
+      "depth": 3,
+      "kind": "item",
+      "label_raw": "関係会社株式",
+      "label": "関係会社株式",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "投資その他の資産",
+        "関係会社株式"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "1,123",
+          "value": 1123,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "1,123",
+          "value": 1123,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r038",
+      "parent_id": "r035",
+      "depth": 3,
+      "kind": "item",
+      "label_raw": "長期貸付金",
+      "label": "長期貸付金",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "投資その他の資産",
+        "長期貸付金"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "－",
+          "value": null,
+          "status": "dash",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "62,000",
+          "value": 62000,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r039",
+      "parent_id": "r035",
+      "depth": 3,
+      "kind": "item",
+      "label_raw": "退職給付に係る資産",
+      "label": "退職給付に係る資産",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "投資その他の資産",
+        "退職給付に係る資産"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "18,404",
+          "value": 18404,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "16,435",
+          "value": 16435,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r040",
+      "parent_id": "r035",
+      "depth": 3,
+      "kind": "item",
+      "label_raw": "その他",
+      "label": "その他",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "投資その他の資産",
+        "その他"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "133,361",
+          "value": 133361,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "70,967",
+          "value": 70967,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r041",
+      "parent_id": "r035",
+      "depth": 3,
+      "kind": "subtotal",
+      "label_raw": "投資その他の資産合計",
+      "label": "投資その他の資産合計",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "投資その他の資産",
+        "投資その他の資産合計"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "197,069",
+          "value": 197069,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "369,362",
+          "value": 369362,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r042",
+      "parent_id": "r014",
+      "depth": 2,
+      "kind": "subtotal",
+      "label_raw": "固定資産合計",
+      "label": "固定資産合計",
+      "path": [
+        "資産の部",
+        "固定資産",
+        "固定資産合計"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "1,670,426",
+          "value": 1670426,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "1,757,841",
+          "value": 1757841,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    },
+    {
+      "id": "r043",
+      "parent_id": "r001",
+      "depth": 1,
+      "kind": "subtotal",
+      "label_raw": "資産合計",
+      "label": "資産合計",
+      "path": [
+        "資産の部",
+        "資産合計"
+      ],
+      "cells": {
+        "c1": {
+          "raw": "7,534,110",
+          "value": 7534110,
+          "status": "number",
+          "negative_zero": false
+        },
+        "c2": {
+          "raw": "5,135,249",
+          "value": 5135249,
+          "status": "number",
+          "negative_zero": false
+        }
+      }
+    }
+  ]
+}

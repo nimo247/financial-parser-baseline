@@ -1,0 +1,37 @@
+{
+  "router_version": "1.0.0",
+  "source": {
+    "filename": "shifted_amount_alignment.pdf",
+    "sha256": "bf92c048a03fb2f834c355899dbf732163b10bdadbe9632f65c250eda369dd1f"
+  },
+  "scope": "Heuristic routing for the declared assets-only baseline; no OCR/VLM executed",
+  "summary": {
+    "pages": 1,
+    "decisions": {
+      "accept_with_diagnostics": 1
+    },
+    "action_required": false
+  },
+  "pages": [
+    {
+      "page_index": 1,
+      "decision": "accept_with_diagnostics",
+      "reasons": [
+        "Supported text/table structure; no arithmetic review trigger detected",
+        "Acceptance does not prove correctness; inspect nonzero residuals and incomplete check coverage"
+      ],
+      "row_count": 43,
+      "validation_summary": {
+        "checks": 20,
+        "exact": 7,
+        "within_tolerance": 11,
+        "beyond_tolerance": 0,
+        "not_evaluated": 2,
+        "complete": false,
+        "requires_review": false
+      },
+      "structural_issues": [],
+      "extraction_error_code": null
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "router_version": "1.0.0",
+  "source": {
+    "filename": "rasterized_scan.pdf",
+    "sha256": "cf0d016881a9f9f6f22865d7aaf42832ba3aa1c539d009c4ced651d91bfffa53"
+  },
+  "scope": "Heuristic routing for the declared assets-only baseline; no OCR/VLM executed",
+  "summary": {
+    "pages": 1,
+    "decisions": {
+      "ocr_required": 1
+    },
+    "action_required": true
+  },
+  "pages": [
+    {
+      "page_index": 1,
+      "decision": "ocr_required",
+      "reasons": [
+        "Image content exists but there is no extractable text layer"
+      ],
+      "row_count": null,
+      "validation_summary": null,
+      "structural_issues": [],
+      "extraction_error_code": null
+    }
+  ]
+}
