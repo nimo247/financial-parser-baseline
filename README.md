@@ -1,4 +1,4 @@
-# Japanese Financial Table Parser
+# Financial Table Parser
 
 A take-home document-intelligence prototype for a supplied Japanese consolidated
 balance-sheet page. It extracts a traceable table, evaluates it against a separately
