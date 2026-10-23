@@ -1,5 +1,5 @@
 {
-  "router_version": "1.0.0",
+  "router_version": "1.1.0",
   "source": {
     "filename": "unknown_section.pdf",
     "sha256": "13daeb1080ee2aa3463552f58260ab27b6c362362e0b700eb2a2c16243464790"
@@ -20,6 +20,7 @@
         "Readable but unsupported section labels: 未分類資産"
       ],
       "row_count": 43,
+      "extraction_method": "detected_cells",
       "validation_summary": null,
       "structural_issues": [],
       "extraction_error_code": null

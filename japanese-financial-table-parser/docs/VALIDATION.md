@@ -16,7 +16,7 @@ hardcoded fixture row IDs or amounts.
 Six section totals and four net-asset groups are identified, each in two periods:
 20 potential checks. Section components use child-section totals and, for gross
 asset groups, net amounts instead of adding gross, depreciation, and net together.
-Net checks add gross to the SIGNED accumulated depreciation. Positive accumulated
+Net checks add gross to the signed accumulated depreciation. Positive accumulated
 depreciation is separately flagged for review.
 
 The implementation supports the baseline's section/subtotal naming convention
@@ -32,7 +32,7 @@ is less than n+1. The residual is integer-valued, so it is at most n. We therefo
 use `abs(reported - sum(signed operands)) <= n` as a conservative conditional bound.
 
 This rule was chosen from an explicit error model, not adjusted until the sample
-passed. It does NOT establish how this issuer rounded or truncated its amounts.
+passed. It does not establish how this issuer rounded or truncated its amounts.
 All nonzero residuals are retained with "cause unverified". Figures are never fixed.
 
 | Status | Meaning |
@@ -58,7 +58,7 @@ For a separately labelled sensitivity analysis only:
 python validate.py --dash-policy assume-zero --output outputs/validation_assuming_dash_zero.json
 ```
 
-This provisionally treats DASH OPERANDS as zero and records the assumption on each
+This provisionally treats dash operands as zero and records the assumption on each
 affected check. The original `raw`, `status`, and null `value` remain intact; a
 separate `arithmetic_value` stores zero. Blank cells and missing reported totals are
 never imputed. No claim is made that the issuer intended a zero.
@@ -76,7 +76,7 @@ the reference audit). The output enumerates every identified relationship.
 
 The CLI returns 1 on beyond-tolerance results, unexpected depreciation signs, or
 unsupported relation structures; 2 on invalid input/graph or IO errors. Exit 0
-means no such review trigger; it does NOT mean all relationships were evaluated
+means no such review trigger; it does not mean all relationships were evaluated
 or the table is correct. Always inspect `complete` and `not_evaluated` as well.
 
 ## Calibration checks and blind spots

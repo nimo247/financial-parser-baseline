@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "source": {
     "filename": "balance_sheet_after_correction.pdf",
     "sha256": "0764bba6f5f0e7984a837e4cc19d8bb95db4a7ac22c26f18c95bbe652c983c74",
@@ -8,11 +8,12 @@
   "extractor": {
     "name": "pdfplumber",
     "version": "0.11.9",
-    "method": "detected_cell_boundaries_and_label_indentation"
+    "method": "detected_cells_with_word_coordinate_fallback"
   },
   "pages": [
     {
       "page_index": 1,
+      "extraction_method": "detected_cells",
       "width": 595.2,
       "height": 841.8,
       "table_bbox": [

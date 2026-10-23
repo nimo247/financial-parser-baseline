@@ -142,7 +142,7 @@ def _check(relation, column, page_index, dash_policy):
 def validate_document(document, dash_policy="skip"):
     if dash_policy not in {"skip", "assume-zero"}:
         raise ValueError("Unknown dash policy")
-    if document.get("schema_version") != "1.0.0":
+    if document.get("schema_version") not in {"1.0.0", "1.1.0"}:
         raise ValueError("Unsupported extraction schema version")
     checks, structural_issues = [], []
     for page in document["pages"]:

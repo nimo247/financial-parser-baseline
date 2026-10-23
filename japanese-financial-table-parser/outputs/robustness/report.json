@@ -1,9 +1,10 @@
 {
-  "scope": "Ten synthetic scenarios from ONE source page; no OCR/VLM is executed",
-  "warning": "Expected accepted corruptions are included. Expectation agreement is NOT extraction accuracy or error-detection recall.",
+  "scope": "14 synthetic scenarios from one source page; no OCR/VLM is executed",
+  "fixture_policy": "Existing sample PDFs remain committed. New borderless PDFs are generated locally by robustness.py and are not committed.",
+  "warning": "Expected accepted corruptions are included. Expectation agreement is not extraction accuracy or error-detection recall.",
   "summary": {
-    "scenarios": 10,
-    "expectations_met": 10,
+    "scenarios": 14,
+    "expectations_met": 14,
     "known_blind_spots": [
       "one_unit_error",
       "compensating_errors"
@@ -14,6 +15,7 @@
       "scenario": "original",
       "category": "control",
       "fixture": "data/balance_sheet_after_correction.pdf",
+      "fixture_availability": "committed sample; regenerated on run",
       "expected_decision": "accept_with_diagnostics",
       "actual_decisions": [
         "accept_with_diagnostics"
@@ -26,6 +28,7 @@
       "scenario": "translated_page",
       "category": "geometry",
       "fixture": "outputs/robustness/fixtures/translated_page.pdf",
+      "fixture_availability": "committed sample; regenerated on run",
       "expected_decision": "accept_with_diagnostics",
       "actual_decisions": [
         "accept_with_diagnostics"
@@ -38,6 +41,7 @@
       "scenario": "rasterized_scan",
       "category": "scan",
       "fixture": "outputs/robustness/fixtures/rasterized_scan.pdf",
+      "fixture_availability": "committed sample; regenerated on run",
       "expected_decision": "ocr_required",
       "actual_decisions": [
         "ocr_required"
@@ -50,6 +54,7 @@
       "scenario": "shifted_amount_alignment",
       "category": "geometry",
       "fixture": "outputs/robustness/fixtures/shifted_amount_alignment.pdf",
+      "fixture_availability": "committed sample; regenerated on run",
       "expected_decision": "accept_with_diagnostics",
       "actual_decisions": [
         "accept_with_diagnostics"
@@ -62,6 +67,7 @@
       "scenario": "digit_transposition",
       "category": "detectable_corruption",
       "fixture": "outputs/robustness/fixtures/digit_transposition.pdf",
+      "fixture_availability": "committed sample; regenerated on run",
       "expected_decision": "human_review",
       "actual_decisions": [
         "human_review"
@@ -74,6 +80,7 @@
       "scenario": "unknown_section",
       "category": "unsupported_structure",
       "fixture": "outputs/robustness/fixtures/unknown_section.pdf",
+      "fixture_availability": "committed sample; regenerated on run",
       "expected_decision": "structure_review",
       "actual_decisions": [
         "structure_review"
@@ -86,6 +93,7 @@
       "scenario": "column_collision",
       "category": "unsupported_structure",
       "fixture": "outputs/robustness/fixtures/column_collision.pdf",
+      "fixture_availability": "committed sample; regenerated on run",
       "expected_decision": "extraction_review",
       "actual_decisions": [
         "extraction_review"
@@ -98,6 +106,7 @@
       "scenario": "one_unit_error",
       "category": "known_blind_spot",
       "fixture": "outputs/robustness/fixtures/one_unit_error.pdf",
+      "fixture_availability": "committed sample; regenerated on run",
       "expected_decision": "accept_with_diagnostics",
       "actual_decisions": [
         "accept_with_diagnostics"
@@ -110,6 +119,7 @@
       "scenario": "compensating_errors",
       "category": "known_blind_spot",
       "fixture": "outputs/robustness/fixtures/compensating_errors.pdf",
+      "fixture_availability": "committed sample; regenerated on run",
       "expected_decision": "accept_with_diagnostics",
       "actual_decisions": [
         "accept_with_diagnostics"
@@ -122,6 +132,7 @@
       "scenario": "dropped_negative_sign",
       "category": "detectable_corruption",
       "fixture": "outputs/robustness/fixtures/dropped_negative_sign.pdf",
+      "fixture_availability": "committed sample; regenerated on run",
       "expected_decision": "human_review",
       "actual_decisions": [
         "human_review"
@@ -129,6 +140,58 @@
       "semantic_content_matches_original": null,
       "expectation_met": true,
       "routing_report": "outputs/robustness/dropped_negative_sign_routing.json"
+    },
+    {
+      "scenario": "borderless",
+      "category": "borderless_geometry",
+      "fixture": "outputs/robustness/fixtures/borderless.pdf",
+      "fixture_availability": "generated locally; not committed",
+      "expected_decision": "accept_with_diagnostics",
+      "actual_decisions": [
+        "accept_with_diagnostics"
+      ],
+      "semantic_content_matches_original": true,
+      "expectation_met": true,
+      "routing_report": "outputs/robustness/borderless_routing.json"
+    },
+    {
+      "scenario": "borderless_shifted_amount",
+      "category": "borderless_geometry",
+      "fixture": "outputs/robustness/fixtures/borderless_shifted_amount.pdf",
+      "fixture_availability": "generated locally; not committed",
+      "expected_decision": "accept_with_diagnostics",
+      "actual_decisions": [
+        "accept_with_diagnostics"
+      ],
+      "semantic_content_matches_original": true,
+      "expectation_met": true,
+      "routing_report": "outputs/robustness/borderless_shifted_amount_routing.json"
+    },
+    {
+      "scenario": "borderless_column_collision",
+      "category": "unsupported_structure",
+      "fixture": "outputs/robustness/fixtures/borderless_column_collision.pdf",
+      "fixture_availability": "generated locally; not committed",
+      "expected_decision": "extraction_review",
+      "actual_decisions": [
+        "extraction_review"
+      ],
+      "semantic_content_matches_original": null,
+      "expectation_met": true,
+      "routing_report": "outputs/robustness/borderless_column_collision_routing.json"
+    },
+    {
+      "scenario": "borderless_missing_amount",
+      "category": "unsupported_structure",
+      "fixture": "outputs/robustness/fixtures/borderless_missing_amount.pdf",
+      "fixture_availability": "generated locally; not committed",
+      "expected_decision": "structure_review",
+      "actual_decisions": [
+        "structure_review"
+      ],
+      "semantic_content_matches_original": null,
+      "expectation_met": true,
+      "routing_report": "outputs/robustness/borderless_missing_amount_routing.json"
     }
   ]
 }

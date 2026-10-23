@@ -1,5 +1,5 @@
 {
-  "router_version": "1.0.0",
+  "router_version": "1.1.0",
   "source": {
     "filename": "rasterized_scan.pdf",
     "sha256": "cf0d016881a9f9f6f22865d7aaf42832ba3aa1c539d009c4ced651d91bfffa53"
@@ -20,6 +20,7 @@
         "Image content exists but there is no extractable text layer"
       ],
       "row_count": null,
+      "extraction_method": null,
       "validation_summary": null,
       "structural_issues": [],
       "extraction_error_code": null

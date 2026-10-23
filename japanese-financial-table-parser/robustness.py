@@ -1,7 +1,7 @@
 """Generate synthetic PDF variants and exercise the real extraction/router path.
 
 Expected routing outcomes include accepted corruptions to expose blind spots;
-the scenario success rate is NOT extraction accuracy or error-detection recall.
+the scenario success rate is not extraction accuracy or error-detection recall.
 PyMuPDF is a development-only fixture-generation dependency.
 """
 from __future__ import annotations
@@ -36,6 +36,15 @@ def _replace(doc, old, new, *, shift=0, font="tiro", occurrence=0):
     else:
         x = rect.x1 - fitz.get_text_length(new, fontname=font, fontsize=size) + shift
     page.insert_text((x, rect.y1 - 1.8), new, fontsize=size, fontname=font)
+
+
+def _strip_drawings(source, destination):
+    doc = fitz.open(source)
+    for page in doc:
+        page.add_redact_annot(page.rect, fill=None, cross_out=False)
+        # Preserve text and images; remove intersecting vector graphics.
+        page.apply_redactions(images=0, graphics=2, text=1)
+    _save(doc, destination)
 
 
 def generate_variants(source, directory):
@@ -100,6 +109,28 @@ def generate_variants(source, directory):
     _save(doc, path)
     variants.append(dict(name="dropped_negative_sign", path=path, expected="human_review",
                          content_should_match=False, category="detectable_corruption"))
+    for name, original_name, expected, match, category in [
+        ("borderless", "original", "accept_with_diagnostics", True, "borderless_geometry"),
+        ("borderless_shifted_amount", "shifted_amount_alignment", "accept_with_diagnostics", True, "borderless_geometry"),
+        ("borderless_column_collision", "column_collision", "extraction_review", False, "unsupported_structure"),
+    ]:
+        origin = next(v["path"] for v in variants if v["name"] == original_name)
+        path = directory / f"{name}.pdf"
+        _strip_drawings(origin, path)
+        variants.append(dict(name=name, path=path, expected=expected,
+                             content_should_match=match, category=category))
+    doc = fitz.open(source)
+    page = doc[0]
+    page.add_redact_annot(page.search_for("608,281")[0], fill=None, cross_out=False)
+    page.apply_redactions(images=0, graphics=0)
+    # Avoid creating a temporary fixture that could be mistaken for a scenario.
+    for page in doc:
+        page.add_redact_annot(page.rect, fill=None, cross_out=False)
+        page.apply_redactions(images=0, graphics=2, text=1)
+    path = directory / "borderless_missing_amount.pdf"
+    _save(doc, path)
+    variants.append(dict(name="borderless_missing_amount", path=path, expected="structure_review",
+                         content_should_match=False, category="unsupported_structure"))
     return variants
 
 
@@ -134,11 +165,13 @@ def run(source, output):
         routing_file = output / (variant["name"] + "_routing.json")
         routing_file.write_text(json.dumps(routed, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         results.append(dict(scenario=variant["name"], category=variant["category"], fixture=str(variant["path"]),
+                            fixture_availability="generated locally; not committed" if variant["name"].startswith("borderless") else "committed sample; regenerated on run",
                             expected_decision=variant["expected"], actual_decisions=decisions,
                             semantic_content_matches_original=content_matches,
                             expectation_met=matched, routing_report=str(routing_file)))
-    report = dict(scope="Ten synthetic scenarios from ONE source page; no OCR/VLM is executed",
-                  warning="Expected accepted corruptions are included. Expectation agreement is NOT extraction accuracy or error-detection recall.",
+    report = dict(scope=f"{len(results)} synthetic scenarios from one source page; no OCR/VLM is executed",
+                  fixture_policy="Existing sample PDFs remain committed. New borderless PDFs are generated locally by robustness.py and are not committed.",
+                  warning="Expected accepted corruptions are included. Expectation agreement is not extraction accuracy or error-detection recall.",
                   summary=dict(scenarios=len(results), expectations_met=sum(r["expectation_met"] for r in results),
                                known_blind_spots=[r["scenario"] for r in results if r["category"] == "known_blind_spot"]),
                   scenarios=results)

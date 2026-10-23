@@ -12,9 +12,13 @@ python -m unittest discover -s tests -v
 The production router uses pdfplumber. PyMuPDF is only needed to generate synthetic
 PDF fixtures and run the development tests. No API key, OCR model, or VLM is used.
 
-`route.py` writes `outputs/routing.json`. `robustness.py` generates nine modified
-PDFs and exercises ten scenarios including the unchanged source; it writes the
+`route.py` writes `outputs/routing.json`. `robustness.py` generates thirteen modified
+PDFs and exercises fourteen scenarios including the unchanged source; it writes the
 aggregate `outputs/robustness/report.json` and individual routing reports.
+
+The four new borderless PDFs are generated locally and excluded from Git. Their
+generator, tests, routing results, and scenario descriptions are committed. Run
+`python robustness.py` to materialize these fixtures before opening their paths.
 
 ## Decisions
 
@@ -48,8 +52,12 @@ routing result, not a crashed parser.
 | One-unit error | Prior cash 2,002,429 -> 2,002,430 | Accepted: known arithmetic blind spot |
 | Compensating errors | Increase prior cash by 63 and decrease receivables by 63 | Accepted: known arithmetic blind spot |
 | Dropped negative sign | Remove triangle from current buildings' accumulated depreciation | Human review |
+| Borderless page | Remove vector drawing objects while preserving all text | Accept via word coordinates; semantic content identical |
+| Borderless shifted amount | Remove drawing objects from the shifted-alignment variant | Accept via word coordinates; semantic content identical |
+| Borderless column collision | Remove drawing objects from the overlapping-column variant | Extraction review |
+| Borderless missing amount | Remove current cash amount and all drawing objects | Structural review; no imputation or column shift |
 
-All ten routing expectations were met. This explicitly includes TWO expected
+All fourteen routing expectations were met. This explicitly includes two expected
 accepted corruptions. It is not 100% error detection, a held-out accuracy result,
 or evidence of broad document generalization. Geometry-preserving cases are
 compared with the original parser's semantic content, not an independent new

@@ -65,6 +65,7 @@ def evaluate(document, reference):
         metrics[status] = metric(status + "_correct", status + "_total")
     order_ok = [r["id"] for r in actual] == [r["id"] for r in expected]
     return dict(scope="Single supplied page; development-set comparison, not held-out generalization",
+                alignment_policy="Sequential row-ID matching; insertions/deletions with renumbering can cause cascading mismatches. Sequence alignment is not implemented.",
                 reference_provenance=reference["provenance"], expected_rows=len(expected), actual_rows=len(actual),
                 row_order_matches=order_ok, periods_match=periods_ok, metrics=metrics, errors=errors,
                 passed=not errors and order_ok)

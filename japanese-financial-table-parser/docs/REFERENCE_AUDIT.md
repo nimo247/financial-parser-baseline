@@ -14,9 +14,9 @@ the expected numeric amounts from raw text and does not infer parent IDs from PD
 geometry. Its only normalization step is NFKC on the manually entered labels;
 paths are built from the explicitly assigned parent graph.
 
-This is AI-assisted visual transcription and review by the SAME assistant that
+This is AI-assisted visual transcription and review by the same assistant that
 wrote the implementation. It is independent of the implemented parser's output,
-but is NOT independent human annotation, a second reviewer, or a held-out test.
+but is not independent human annotation, a second reviewer, or a held-out test.
 The machine-readable provenance records that limitation.
 
 ## Checked source facts
@@ -37,7 +37,7 @@ The machine-readable provenance records that limitation.
 Source SHA-256:
 `0764bba6f5f0e7984a837e4cc19d8bb95db4a7ac22c26f18c95bbe652c983c74`
 
-## Source residuals to retain for the next stage
+## Observed source residuals
 
 Residual means reported result minus calculation, in displayed thousand-yen units.
 These observations are retained in the implemented validator and regression tests;

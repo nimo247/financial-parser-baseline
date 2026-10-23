@@ -14,10 +14,22 @@ balance-sheet equation cannot be checked from this input.
 
 ## Implementation choices
 
-Use the text layer with pdfplumber and its detected table-cell boundaries. This
+Prefer the text layer with pdfplumber and its detected table-cell boundaries. This
 avoids OCR for a document that already contains text, preserves source coordinates,
 and handles a dash in the prior-year column without shifting the current amount.
 NFKC supports interpretation without overwriting raw text.
+
+The original baseline depended on drawn rectangle/rule boundaries: removing the
+341 shaded rectangles while preserving all 1,000 text characters produced no
+detected table. A conservative word-coordinate fallback now handles that case.
+It identifies the two headers/date row, clusters single-line body rows, infers amount
+right-edge anchors, and assigns numbers/dashes geometrically. The existing hierarchy
+and value semantics are shared by both paths. Each page records the extraction
+method; inferred regions are not presented as recovered physical borders.
+
+The fallback rejects ambiguous tokens, missing column evidence, crossing labels,
+partial amount rows, and outlying alignment. It does not establish general support
+for merged headers, wrapped labels, arbitrary borderless tables, or many tables/page.
 
 Label indentation provides a display hierarchy. Row IDs plus page indices provide
 identity; full paths distinguish repeated labels. Six section names and explicit
@@ -35,6 +47,9 @@ Against the separately entered, visually checked reference: 43/43 labels and pat
 match. The same assistant authored the implementation and reference. Independent
 human annotation is pending; this is a development-set measurement, not an
 independent held-out evaluation. See `REFERENCE_AUDIT.md` for the exact provenance.
+Evaluation currently aligns by sequential row ID; dropping/inserting a row and
+renumbering later IDs can cause cascading mismatches. Sequence alignment by label,
+path context, and order remains future work. The 86/86 score covers the fixed page.
 
 ## Validation findings
 
@@ -51,16 +66,19 @@ displayed-unit error assumption per quantity, not fitted to force sample success
 
 ## Robustness and routing
 
-Ten synthetic scenarios exercise the real PDF-to-routing path. Whole-page
+Fourteen synthetic scenarios exercise the real PDF-to-routing path. Whole-page
 translation and moving a number inside its cell preserve extracted content. An
 image-only scan requests OCR; an unknown readable section requests structural
 review; a column collision requests extraction review; a digit transposition and
-a removed negative sign request human review.
+a removed negative sign request human review. A borderless copy and a borderless
+copy with a shifted amount preserve all extracted content through the fallback.
+A borderless column collision requests extraction review; a missing amount requests
+structural review instead of shifting columns or imputing zero.
 
 A one-unit error and two compensating amount errors remain accepted. These are
-intentional demonstrations of diagnostic blind spots. All ten expected routing
+intentional demonstrations of diagnostic blind spots. All fourteen expected routing
 outcomes are met, including those accepted corruptions; the result is not an
-error-detection accuracy claim. Thirty-two automated test cases pass.
+error-detection accuracy claim. Forty automated test cases pass.
 
 ## Extension and remaining work
 

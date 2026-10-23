@@ -1,5 +1,5 @@
 {
-  "router_version": "1.0.0",
+  "router_version": "1.1.0",
   "source": {
     "filename": "dropped_negative_sign.pdf",
     "sha256": "108d8992a16473faecb9e739ac775a8db516dd2dce5ed4a89fd0675f5483394e"
@@ -21,6 +21,7 @@
         "Compare an alternate extractor/source page before deciding whether the issue is extraction or source data"
       ],
       "row_count": 43,
+      "extraction_method": "detected_cells",
       "validation_summary": {
         "checks": 20,
         "exact": 7,

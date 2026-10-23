@@ -2,7 +2,7 @@
   "type": "object",
   "properties": {
     "schema_version": {
-      "const": "1.0.0"
+      "const": "1.1.0"
     },
     "source": {
       "type": "object",
@@ -36,7 +36,7 @@
           "type": "string"
         },
         "method": {
-          "const": "detected_cell_boundaries_and_label_indentation"
+          "const": "detected_cells_with_word_coordinate_fallback"
         }
       },
       "required": [
@@ -62,7 +62,7 @@
   ],
   "additionalProperties": false,
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Baseline Japanese financial table extraction v1",
+  "title": "Japanese financial table extraction v1.1",
   "$defs": {
     "bbox": {
       "type": "array",
@@ -393,6 +393,12 @@
             "$ref": "#/$defs/row"
           },
           "minItems": 1
+        },
+        "extraction_method": {
+          "enum": [
+            "detected_cells",
+            "word_coordinates"
+          ]
         }
       },
       "required": [
@@ -401,7 +407,8 @@
         "height",
         "table_bbox",
         "metadata",
-        "rows"
+        "rows",
+        "extraction_method"
       ],
       "additionalProperties": false
     }

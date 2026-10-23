@@ -39,7 +39,7 @@ def preflight(page):
 
 def route_page(page, page_index, source_sha256):
     result = dict(page_index=page_index, decision=None, reasons=[], row_count=None,
-                  validation_summary=None, structural_issues=[], extraction_error_code=None)
+                  extraction_method=None, validation_summary=None, structural_issues=[], extraction_error_code=None)
     signal = preflight(page)
     if signal:
         result.update(decision=signal[0], reasons=[signal[1]])
@@ -50,6 +50,7 @@ def route_page(page, page_index, source_sha256):
         result.update(decision=exc.code, reasons=[str(exc)], extraction_error_code=exc.code)
         return result
     result["row_count"] = len(extracted["rows"])
+    result["extraction_method"] = extracted["extraction_method"]
     unknown = [r["label_raw"] for r in extracted["rows"]
                if r["kind"] == "section" and r["label"] not in SUPPORTED_SECTIONS]
     if unknown:
@@ -59,7 +60,7 @@ def route_page(page, page_index, source_sha256):
     if len(set(periods)) != 2 or periods != sorted(periods):
         result.update(decision="structure_review", reasons=["Expected distinct previous/current periods in ascending column order"])
         return result
-    document = dict(schema_version="1.0.0", source=dict(sha256=source_sha256), pages=[extracted])
+    document = dict(schema_version="1.1.0", source=dict(sha256=source_sha256), pages=[extracted])
     try:
         validation = validate_document(document)
     except (ValueError, KeyError, TypeError) as exc:
@@ -90,7 +91,7 @@ def route_document(path):
     if not pages:
         raise ValueError("PDF contains no pages")
     counts = dict(Counter(p["decision"] for p in pages))
-    return dict(router_version="1.0.0", source=dict(filename=path.name, sha256=digest),
+    return dict(router_version="1.1.0", source=dict(filename=path.name, sha256=digest),
                 scope="Heuristic routing for the declared assets-only baseline; no OCR/VLM executed",
                 summary=dict(pages=len(pages), decisions=counts,
                              action_required=any(p["decision"] != "accept_with_diagnostics" for p in pages)),

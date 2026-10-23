@@ -1,5 +1,5 @@
 {
-  "router_version": "1.0.0",
+  "router_version": "1.1.0",
   "source": {
     "filename": "shifted_amount_alignment.pdf",
     "sha256": "bf92c048a03fb2f834c355899dbf732163b10bdadbe9632f65c250eda369dd1f"
@@ -21,6 +21,7 @@
         "Acceptance does not prove correctness; inspect nonzero residuals and incomplete check coverage"
       ],
       "row_count": 43,
+      "extraction_method": "detected_cells",
       "validation_summary": {
         "checks": 20,
         "exact": 7,

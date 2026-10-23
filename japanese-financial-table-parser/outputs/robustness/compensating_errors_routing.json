@@ -1,5 +1,5 @@
 {
-  "router_version": "1.0.0",
+  "router_version": "1.1.0",
   "source": {
     "filename": "compensating_errors.pdf",
     "sha256": "9d39aefbd48b1ea0dd1597546673ee7d7a0ff1a65bd9c8667154ec27cc7f2034"
@@ -21,6 +21,7 @@
         "Acceptance does not prove correctness; inspect nonzero residuals and incomplete check coverage"
       ],
       "row_count": 43,
+      "extraction_method": "detected_cells",
       "validation_summary": {
         "checks": 20,
         "exact": 7,

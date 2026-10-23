@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+from dataclasses import dataclass
 from datetime import date
 import hashlib
 import json
@@ -14,6 +15,7 @@ from pathlib import Path
 import re
 import sys
 import unicodedata
+from statistics import median
 
 import pdfplumber
 
@@ -65,6 +67,131 @@ def cluster_indents(positions, tolerance=2.0):
     return anchors
 
 
+@dataclass
+class CoordinateRegion:
+    bbox: tuple
+    cells: list | None = None
+
+
+@dataclass
+class CoordinateTable:
+    bbox: tuple
+    columns: list
+    rows: list
+    values: list
+
+    def extract(self):
+        return self.values
+
+
+def _word_lines(words, tolerance=2.0):
+    lines = []
+    for word in sorted(words, key=lambda w: ((w["top"] + w["bottom"]) / 2, w["x0"])):
+        center = (word["top"] + word["bottom"]) / 2
+        if not lines or abs(center - lines[-1][0]) > tolerance:
+            lines.append((center, [word]))
+        else:
+            lines[-1][1].append(word)
+    return [sorted(line, key=lambda w: w["x0"]) for _, line in lines]
+
+
+def coordinate_table(page):
+    """Conservative borderless fallback: two headers, aligned single-line rows.
+
+    Header centers seed column bands; body right-edge medians anchor amounts.
+    No sample row count, amount, or page coordinate is used. Ambiguous fragments,
+    crossing labels, missing columns, and outlying amounts request review.
+    """
+    words = page.extract_words(x_tolerance=2, y_tolerance=2)
+    headers = sorted([w for w in words if w["text"] in {"前連結会計年度", "当連結会計年度"}],
+                     key=lambda w: w["x0"])
+    if len(headers) != 2 or abs(headers[0]["top"] - headers[1]["top"]) > 2:
+        raise ExtractionError("Coordinate fallback requires two aligned period headers")
+    centers = [(w["x0"] + w["x1"]) / 2 for w in headers]
+    gap = centers[1] - centers[0]
+    if gap <= 4 * max(w["height"] for w in headers):
+        raise ExtractionError("Period headers are too close to infer column bands")
+    label_right = centers[0] - gap / 2
+    column_split = sum(centers) / 2
+    lines = _word_lines(words)
+    date_lines = [line for line in lines if min(w["top"] for w in line) > max(w["top"] for w in headers)
+                  and len(re.findall(r"\d{4}年\d{1,2}月\d{1,2}日",
+                                     re.sub(r"\s+", "", normalize("".join(w["text"] for w in line))))) == 2]
+    if len(date_lines) != 1:
+        raise ExtractionError("Coordinate fallback requires one unambiguous two-period date row")
+    after_dates = max(w["bottom"] for w in date_lines[0])
+    body = []
+    footer_seen = False
+    for line in lines:
+        if min(w["top"] for w in line) <= after_dates:
+            continue
+        text = re.sub(r"\s+", "", normalize("".join(w["text"] for w in line)))
+        if min(w["top"] for w in line) > page.height * .85 and re.fullmatch(r"-\d+-", text):
+            footer_seen = True
+            continue
+        if footer_seen:
+            raise ExtractionError("Unexpected text after the printed page footer")
+        labels = [w for w in line if w["x0"] < label_right]
+        values = [w for w in line if w["x0"] >= label_right]
+        if not labels or any(w["x1"] > label_right for w in labels):
+            raise ExtractionError("Coordinate fallback encountered a missing or crossing row label")
+        body.append((line, labels, values))
+    if not body:
+        raise ExtractionError("Coordinate fallback found no body rows")
+    candidate_edges = [[], []]
+    for _, _, values in body:
+        for word in values:
+            if normalize(word["text"]) in {"△", "▲", "-", "−"}:
+                continue
+            try:
+                token = parse_cell(word["text"])
+            except ExtractionError:
+                continue
+            if token["status"] in {"number", "dash"}:
+                candidate_edges[int(word["x1"] >= column_split)].append(word["x1"])
+    if any(len(edges) < 2 for edges in candidate_edges):
+        raise ExtractionError("Insufficient body evidence for both numeric columns")
+    anchors = [median(edges) for edges in candidate_edges]
+    if anchors[0] >= column_split or anchors[1] <= column_split or anchors[1] - anchors[0] < gap / 2:
+        raise ExtractionError("Body amount anchors disagree with period-header bands")
+    font_height = median(w["height"] for line, _, _ in body for w in line)
+    alignment_tolerance = max(2 * font_height, .2 * (anchors[1] - anchors[0]))
+    left = max(0, min(w["x0"] for _, labels, _ in body for w in labels) - 2)
+    right = min(page.width, max(w["x1"] for line, _, _ in body for w in line) + 2)
+    top = max(0, min(w["top"] for w in body[0][0]) - 2)
+    bottom = min(page.height, max(w["bottom"] for w in body[-1][0]) + 2)
+    if not left < label_right < column_split < right:
+        raise ExtractionError("Invalid inferred column boundaries")
+    boundaries = [left, label_right, column_split, right]
+    rows, raw_rows = [], []
+    for i, (line, labels, values) in enumerate(body):
+        raw_values = [[], []]
+        for word in values:
+            column = min(range(2), key=lambda c: abs(word["x1"] - anchors[c]))
+            if abs(word["x1"] - anchors[column]) > alignment_tolerance:
+                raise ExtractionError("Amount token is outside inferred column alignment", code="extraction_review")
+            raw_values[column].append(word)
+        amounts = []
+        for fragments in raw_values:
+            fragments.sort(key=lambda w: w["x0"])
+            if len(fragments) > 1 and not (
+                len(fragments) == 2 and normalize(fragments[0]["text"]) in {"△", "▲", "-", "−"}
+                and parse_cell(fragments[1]["text"])["status"] == "number"
+                and not re.match(r"[△▲\-−]", normalize(fragments[1]["text"]))
+            ):
+                raise ExtractionError("Ambiguous multiple amount tokens in one inferred cell", code="extraction_review")
+            raw = "".join(w["text"] for w in fragments)
+            parse_cell(raw)  # Reject unsupported values rather than concatenating arbitrary tokens.
+            amounts.append(raw)
+        row_top = top if i == 0 else (max(w["bottom"] for w in body[i-1][0]) + min(w["top"] for w in line)) / 2
+        row_bottom = bottom if i == len(body)-1 else (max(w["bottom"] for w in line) + min(w["top"] for w in body[i+1][0])) / 2
+        cells = [(boundaries[j], row_top, boundaries[j+1], row_bottom) for j in range(3)]
+        rows.append(CoordinateRegion((left, row_top, right, row_bottom), cells))
+        raw_rows.append(["".join(w["text"] for w in labels)] + amounts)
+    columns = [CoordinateRegion((boundaries[j], top, boundaries[j+1], bottom)) for j in range(3)]
+    return CoordinateTable((left, top, right, bottom), columns, rows, raw_rows)
+
+
 def extract_metadata(page, table):
     header = page.crop((0, 0, page.width, table.bbox[1]))
     words = header.extract_words()
@@ -108,9 +235,12 @@ def extract_page(page, page_index):
     if not page.chars:
         raise ExtractionError(f"Page {page_index}: no text layer; OCR required", code="ocr_required")
     tables = [t for t in page.find_tables() if len(t.rows) >= 2 and len(t.columns) >= 2]
-    if len(tables) != 1 or len(tables[0].columns) != 3:
+    if not tables:
+        table, method = coordinate_table(page), "word_coordinates"
+    elif len(tables) == 1 and len(tables[0].columns) == 3:
+        table, method = tables[0], "detected_cells"
+    else:
         raise ExtractionError(f"Page {page_index}: expected one detected 3-column table")
-    table = tables[0]
     metadata = extract_metadata(page, table)
     raw_rows = table.extract()
     staged = []
@@ -148,7 +278,7 @@ def extract_page(page, page_index):
                    label_source_bbox=box(geometry.cells[0]), cells=cells)
         rows.append(row)
         stack.append(row)
-    return dict(page_index=page_index, width=page.width, height=page.height,
+    return dict(page_index=page_index, extraction_method=method, width=page.width, height=page.height,
                 table_bbox=box(table.bbox), metadata=metadata, rows=rows)
 
 
@@ -161,10 +291,10 @@ def parse_document(path):
                 pages.append(extract_page(page, i))
             except ExtractionError as exc:
                 raise ExtractionError(f"{path.name}, page {i}: {exc}", code=exc.code) from exc
-    return dict(schema_version="1.0.0", source=dict(filename=path.name,
+    return dict(schema_version="1.1.0", source=dict(filename=path.name,
                 sha256=hashlib.sha256(path.read_bytes()).hexdigest(), page_count=len(pages)),
                 extractor=dict(name="pdfplumber", version=pdfplumber.__version__,
-                               method="detected_cell_boundaries_and_label_indentation"), pages=pages)
+                               method="detected_cells_with_word_coordinate_fallback"), pages=pages)
 
 
 def write_outputs(document, output):

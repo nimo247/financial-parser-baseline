@@ -1,5 +1,5 @@
 {
-  "router_version": "1.0.0",
+  "router_version": "1.1.0",
   "source": {
     "filename": "digit_transposition.pdf",
     "sha256": "36b52f2cb011005622e6e9dcd5aea8ac40abacf4123001c55b496cb63b7eeb49"
@@ -21,6 +21,7 @@
         "Compare an alternate extractor/source page before deciding whether the issue is extraction or source data"
       ],
       "row_count": 43,
+      "extraction_method": "detected_cells",
       "validation_summary": {
         "checks": 20,
         "exact": 7,

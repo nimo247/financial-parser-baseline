@@ -1,5 +1,5 @@
 {
-  "router_version": "1.0.0",
+  "router_version": "1.1.0",
   "source": {
     "filename": "one_unit_error.pdf",
     "sha256": "e765ebb6532e74c22bc2908be4112de8916c48d343604347f16aa5d7e4c63bd9"
@@ -21,6 +21,7 @@
         "Acceptance does not prove correctness; inspect nonzero residuals and incomplete check coverage"
       ],
       "row_count": 43,
+      "extraction_method": "detected_cells",
       "validation_summary": {
         "checks": 20,
         "exact": 7,

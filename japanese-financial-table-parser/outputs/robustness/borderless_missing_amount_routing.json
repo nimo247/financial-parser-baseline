@@ -1,0 +1,29 @@
+{
+  "router_version": "1.1.0",
+  "source": {
+    "filename": "borderless_missing_amount.pdf",
+    "sha256": "b66442f024afa123d7b77c49c18ee2a0f4632ed99fcc471c57ad040b6ee0d6fe"
+  },
+  "scope": "Heuristic routing for the declared assets-only baseline; no OCR/VLM executed",
+  "summary": {
+    "pages": 1,
+    "decisions": {
+      "structure_review": 1
+    },
+    "action_required": true
+  },
+  "pages": [
+    {
+      "page_index": 1,
+      "decision": "structure_review",
+      "reasons": [
+        "Partially blank value row: 現金及び預金"
+      ],
+      "row_count": null,
+      "extraction_method": null,
+      "validation_summary": null,
+      "structural_issues": [],
+      "extraction_error_code": "structure_review"
+    }
+  ]
+}

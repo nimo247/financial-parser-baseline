@@ -1,5 +1,5 @@
 {
-  "router_version": "1.0.0",
+  "router_version": "1.1.0",
   "source": {
     "filename": "column_collision.pdf",
     "sha256": "92a301c7b90a4a19319f923c9a0cb935e7ec729808d530390ac5083cca68760c"
@@ -20,6 +20,7 @@
         "Unrecognized value token '2,060028,,242819'"
       ],
       "row_count": null,
+      "extraction_method": null,
       "validation_summary": null,
       "structural_issues": [],
       "extraction_error_code": "extraction_review"

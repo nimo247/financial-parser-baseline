@@ -1,5 +1,6 @@
 {
   "scope": "Single supplied page; development-set comparison, not held-out generalization",
+  "alignment_policy": "Sequential row-ID matching; insertions/deletions with renumbering can cause cascading mismatches. Sequence alignment is not implemented.",
   "reference_provenance": {
     "method": "AI-assisted manual transcription and visual review of rendered source",
     "independent_of_parser_output": true,
